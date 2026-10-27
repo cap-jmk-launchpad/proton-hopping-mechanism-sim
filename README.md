@@ -1,37 +1,57 @@
 # proton-hopping-mechanism-sim
 
 Simulation research project for Julian M. Kleber's proposed **proton-hopping (Grotthuss-type) mechanism**
-for the acid-/base-mediated cyclisation cascades behind tetracycline-type and terpenoid ring systems
+for the base-induced polyketide cyclisation cascades behind tetracycline-type ring systems
 (origin: *F5-2 API Synthesis Plan*, 2020, DOI 10.13140/RG.2.2.23579.28965; rewritten preprint draft in
 `cap-jmk-launchpad/proton-hopping-preprints`).
 
-> Status: research plan + toolchain smoke test. **No mechanistic result exists yet.** Everything below
-> marked H1..H4 is a hypothesis.
+> Status: research plan + toolchain smoke test. **No mechanistic result exists yet.** H1–H4 are hypotheses.
 
-## Hypotheses
-- **H1 (relay initiation):** In strongly acidic, H-bonded media (superacid / Lewis-acid-assisted Brønsted acid
-  such as [TiCl4OH]⁻/H⁺, or an SHC-like acid site), the initiating proton reaches the alkene/epoxide via a
-  Grotthuss relay through an H-bond wire rather than by direct encounter with a free acid.
-- **H2 (concerted shuttle in the cascade):** Proton release/re-uptake that terminates or propagates the
-  cationic (terpenoid) or anionic/enolate (polyketide, "superbase") cyclisation is shuttled through the same
-  wire, lowering the effective barrier vs. the classical stepwise mechanism.
-- **H3 (kinetic signature):** If H1/H2 hold, the rate-limiting step shows a primary H/D KIE and a
-  pronounced dependence on wire length / solvent H-bond structure; the classical mechanism does not.
-- **H4 (flow relevance):** The relay is sensitive to local acid concentration and mixing, i.e. conditions a
-  microreactor can control (link to the continuous-flow argument of the original document).
+## Hypotheses (Julian, 2026-10-27: mechanism applies to the base-driven ring closure — tentative)
+- **H1 (relay deprotonation):** In base-induced cyclisation of poly-β-carbonyl chains, the active-methylene C–H
+  proton leaves via a multi-hop Grotthuss relay (protic solvent / base conjugate acid / substrate enol–carbonyl
+  groups) rather than by direct transfer to a discrete base.
+- **H2 (relay reprotonation + coupling):** The alkoxide formed on ring closure is reprotonated through the same
+  wire, and the shuttled proton couples successive ring closures into a cascade.
+- **H3 (kinetic signature):** Primary H/D KIE with proton-inventory dependence on hop number; strong dependence
+  on protic-solvent structure at constant base strength.
+- **H4 (flow relevance):** Local base concentration, water/alcohol content and mixing (controllable in flow) govern
+  rate and regioselectivity.
+- Possible extension (low priority): analogous relay in acid-initiated epoxy-polyene cyclisation (control system).
+
+Closest prior art (see `docs/literature.md`): ARO/CYC enzymes TcmN/WhiE use a single coordinated water as base
+(Ames 2008; Lee 2012); computed water relays in enolisation/organocatalytic aldol (Alagona 2010; Armstrong 2014).
+
+## Substrates (all three are simulated — Julian, 2026-10-27)
+| ID | Substrate | Role | Folder |
+|---|---|---|---|
+| S1 | Platform compound **10** (F5-2) | target platform molecule; base cascade | `substrates/s1_compound10/` |
+| S2 | Krohn polyketide **12** (→ 5,6-dideoxypradinone 11) | main base-cascade substrate | `substrates/s2_krohn12/` |
+| S3 | Simple epoxy-polyene model | acid-cascade control / extension | `substrates/s3_epoxypolyene/` |
+Structures must be entered by Julian (SMILES in each `substrate.yaml`); cut-down fragments are derived per stage.
 
 ## Methods (staged)
 | Stage | Goal | Method | Compute |
 |---|---|---|---|
 | 0 | Toolchain smoke test | GFN2-xTB rigid proton scan in H5O2+ (`scripts/smoke_proton_scan.py`) | laptop, seconds |
-| 1 | Model systems | Proton transfer along (H2O)n / (HF)n / ROH wires, n=1–4; relaxed constrained scans + NEB (xtb via ASE) | CPU, hours |
-| 2 | Cascade models | Truncated substrates: epoxy-polyene (Corey/Nishizawa type) and a poly-β-ketone (Harris–Wittek type); classical stepwise vs. relay-assisted path; DFT refinement (ORCA or Psi4, ωB97X-D/def2-TZVP //def2-SVP, CPCM/SMD + explicit waters) | CPU cluster |
-| 3 | Dynamics | Explicit-solvent QM/MM (CP2K QM/MM or ORCA/xtb in ASE) and AIMD/metadynamics on the proton coordinate (CV: proton-transfer coordinate δ, coordination numbers) | GPU/HPC — **not before November 2026** |
-| 4 | Kinetics | Eyring/TST rates, Bell/Wigner tunnelling corrections, H/D KIE from ZPE; microkinetic comparison relay vs. classical; sensitivity to wire length and acid strength | CPU |
-| 5 | Experimental proposal | Predictions (KIE, solvent/acid dependence) handed to wet lab; flow conditions | — |
+| 1 | Model relays | Proton transfer from a β-diketone active methylene through (H2O)n / (MeOH)n, n=0–4, to a base (OH⁻, MeO⁻, amine); relaxed scans + NEB (xtb/ASE) | CPU, hours |
+| 2 | Substrate paths | For S1, S2 (base) and S3 (acid control): CREST conformers, then classical vs. relay paths for deprotonation, ring closure, reprotonation; DFT refinement (Psi4/ORCA, ωB97X-D/def2-TZVP//def2-SVP, SMD + explicit solvent); cut-down fragments first | CPU cluster |
+| 3 | Dynamics | Explicit-solvent QM/MM (CP2K) and AIMD/metadynamics on proton-transfer CVs for S2 (then S1, S3) | GPU/HPC — **not before November 2026** |
+| 4 | Kinetics | TST rates, Wigner/Bell tunnelling, H/D KIE and proton inventory; relay vs. classical microkinetics | CPU |
+| 5 | Experimental proposal | Predictions (KIE, solvent dependence, D-labelling) for wet lab / flow | — |
 
-Success criteria: relay path ≥ ~2–3 kcal/mol below classical at the same level of theory and robust to
-functional/solvation choice; otherwise H2 is rejected and reported as such.
+Success criterion: relay path lower than classical at the same level of theory and robust to functional and
+solvation choice; otherwise H1/H2 are rejected and reported. No threshold numbers are fixed until stage 1.
+
+## Layout
+```
+scripts/smoke_proton_scan.py      stage 0
+scripts/archive_to_bucket.sh      encrypted upload
+substrates/<id>/substrate.yaml    SMILES (TODO Julian), charge, fragments
+stages/stage1_model_relays/       (to be filled)
+stages/stage2_substrate_paths/{s1_compound10,s2_krohn12,s3_epoxypolyene}/
+docs/literature.md, docs/open-questions.md
+```
 
 ## Tools (open source / free-for-academia)
 xtb (GFN2, LGPL), ASE (NEB, constraints), CREST (conformers), Psi4 (LGPL), CP2K (GPL; AIMD, QM/MM),

@@ -1,0 +1,4 @@
+name: "Simple epoxy-polyene model (acid control)"
+smiles: TODO  # to be provided by Julian; do not guess
+charge: 0
+fragments: []

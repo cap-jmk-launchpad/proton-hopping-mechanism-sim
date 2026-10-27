@@ -19,6 +19,8 @@ tautomerism. The search was limited; a full-text search (SciFinder/Reaxys) is st
 | Zhou, Li, Tang, Nat. Prod. Rep. 2010, 27, 839. 10.1039/b911518h | Review of aromatic polyketide cyclisation (bacteria, fungi). | Background. |
 
 ## Biomimetic (non-enzymatic) polyketide cyclisation
+| Ref | Summary | Relevance |
+|---|---|---|
 | Harris & Wittek, JACS 1975, 97, 3270. 10.1021/ja00844a085 | Biogenetic-type syntheses of polycyclic polyketides from partially protected β-hexa/heptaketones (base-mediated). | Experimental model reaction for the base cascade; no mechanistic proton data. |
 
 ## Proton relays in organocatalysis / enolisation (computational)

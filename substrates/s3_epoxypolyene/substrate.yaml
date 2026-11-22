@@ -1,4 +1,4 @@
-name: "Simple epoxy-polyene model (acid control)"
-smiles: TODO  # to be provided by Julian; do not guess
+name: "Simple epoxy-polyene model (acid control): (E)-6,7-epoxygeranyl acetate"
+smiles: "C/C(=C\\COC(=O)C)/CCC1C(O1)(C)C"   # PubChem 5951297
 charge: 0
 fragments: []

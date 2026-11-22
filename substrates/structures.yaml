@@ -1,0 +1,137 @@
+# Structures for the proton-relay simulations, with provenance.
+# Derived by the Researcher agent on 2026-11-22 (Julian: "derive the SMILES/SMARTS yourself").
+# Validated by scripts/validate_structures.py (RDKit sanitisation, formula, monoisotopic mass).
+# ref_mass = literature or PubChem monoisotopic mass used for the check; ref_formula likewise.
+
+substrates:
+  S2_krohn12:
+    name: "methyl 4-[3-(3,5-dioxohexyl)-1,5-dihydroxy-7-methoxy-9,10-dioxo-9,10-dihydroanthracen-2-yl]-3-oxobutanoate"
+    role: "Krohn polyketide 12 (bis-ketide anthraquinone, main base-cascade substrate)"
+    smiles: "COC(=O)CC(=O)Cc1c(O)c2C(=O)c3c(O)cc(OC)cc3C(=O)c2cc1CCC(=O)CC(C)=O"
+    ref_formula: C26H24O10
+    ref_mass: 496.13693   # calculated HRMS value given in the source (found 496.13555)
+    pubchem_cid: null      # not in PubChem (SMILES lookup returned CID 0 on 2026-11-22)
+    source: >
+      N. Hayat, Dissertation, Univ.-GH Paderborn 1999 (supervisor K. Krohn), urn:nbn:de:hbz:466-1999010146,
+      https://digital.ub.uni-paderborn.de/hsmig/content/titleinfo/2143 : experimental entry for "Polyketid 34",
+      IUPAC name, C26H24O10, 1H/13C NMR; cyclised with K2CO3 in iPrOH/CH2Cl2 (45 C, 2 h, 70 %) to 33 (C26H20O8).
+      The thesis lists the JOC paper (Krohn, Bernhard, Floerke, Hayat, J. Org. Chem. 2000, 65, 3218,
+      doi:10.1021/jo9918089) as the publication of this 5,6-dideoxypradinone synthesis.
+    ambiguity: >
+      Thesis numbering 34 -> 33 is mapped to JOC-2000 numbering 12 -> 11 by inference (same reaction, authors,
+      product class); the JOC scheme itself (paywalled) was not seen. Substitution pattern from the IUPAC name and
+      NMR (meta-coupled 6'-H/8'-H, J = 2.5 Hz, consistent with 7-OMe). Enol tautomers exist in CDCl3; keto form used.
+  S2_product11:
+    name: "methyl 1,9,14-trihydroxy-11-methoxy-3-methyl-8,13-dioxo-5,6,8,13-tetrahydrobenzo[a]tetracene-2-carboxylate"
+    role: "cyclisation product (5,6-dideoxypradinone methyl ester, Krohn 11 / Hayat 33)"
+    smiles: "O=C1c2c(O)c3c(cc2C(=O)c2c(O)cc(OC)cc21)CCc1cc(C)c(C(=O)OC)c(O)c13"
+    ref_formula: C26H20O8
+    ref_mass: 460.1158
+    pubchem_cid: null
+    source: "Hayat 1999 (as above), entry 33; connectivity derived from the two aldol condensations C4->C3'' and C2->C5'' of 34."
+    ambiguity: >
+      The thesis entry name reads "Essigsaeure-...-2-ylmethylester"; formula C26H20O8 and the drawn CO2CH3 on the ring
+      only fit an ester directly on C-2, which is what is used here.
+  S1_compound10:
+    name: "methyl 3,5,7-trioxooctanoate"
+    role: "platform polyketide (tetraketide ester) standing in for F5-2 compound 10"
+    smiles: "CC(=O)CC(=O)CC(=O)CC(=O)OC"
+    ref_formula: C9H12O5
+    ref_mass: 200.06847348
+    pubchem_cid: 12787100
+    source: >
+      F5-2 (Kleber 2020, doi:10.13140/RG.2.2.23579.28965) describes 10 only as a simple platform compound with a
+      SciFinder retrosynthesis from methyl propionate; the scheme could not be retrieved (ResearchGate 403, no local copy).
+      Chosen as the simplest poly-beta-carbonyl ester that undergoes the Harris-type base cyclisation
+      (Harris & Wittek, JACS 1975, doi:10.1021/ja00844a085) to an aromatic ring.
+    ambiguity: >
+      GENUINELY AMBIGUOUS. Options considered: (a) heptane-2,4,6-trione (PubChem 12285, triketide);
+      (b) methyl 3,5,7-trioxooctanoate (chosen); (c) methyl 2-methyl-3,5,7-trioxooctanoate (propionate-derived
+      C-methyl, not in PubChem). (b) chosen because it is in PubChem, has a defined aldol product (methyl orsellinate)
+      and is the closest simple model of a tetracycline-type poly-beta-keto chain. Replace if the original scheme appears.
+  S1_product:
+    name: "methyl orsellinate (methyl 2,4-dihydroxy-6-methylbenzoate)"
+    role: "C2->C7 aldol/aromatisation product of S1"
+    smiles: "CC1=CC(=CC(=C1C(=O)OC)O)O"
+    ref_formula: C9H10O4
+    ref_mass: 182.0579088
+    pubchem_cid: 76658
+    source: PubChem CID 76658
+  S3_epoxypolyene:
+    name: "(E)-6,7-epoxygeranyl acetate"
+    role: "acid-cascade control (truncated 2,3-oxidosqualene model, one ring closure)"
+    smiles: "C/C(=C\\COC(=O)C)/CCC1C(O1)(C)C"
+    ref_formula: C12H20O3
+    ref_mass: 212.1412445
+    pubchem_cid: 5951297
+    source: >
+      PubChem CID 5951297; truncation of (3S)-2,3-oxidosqualene (PubChem 5366020) per the epoxy-polyene cascade
+      literature (Corey et al., JACS 1995, doi:10.1021/ja00152a030; Hess, OBC 2017, doi:10.1039/c7ob00222j).
+    ambiguity: "Racemic epoxide; stereocentre left unassigned. Longer models (epoxyfarnesyl) are an option for stage 2."
+
+fragments:
+  F1_acac:
+    name: pentane-2,4-dione (acetylacetone)
+    role: "stage-1 model beta-diketone; active methylene C3"
+    smiles: "CC(=O)CC(C)=O"
+    ref_formula: C5H8O2
+    ref_mass: 100.052429494
+    pubchem_cid: 31261
+    source: "PubChem 31261; model used by Alagona et al. PCCP 2010 (doi:10.1039/c003999c)"
+  F1_enolate:
+    name: pentane-2,4-dionate (acac enolate)
+    role: "stage-1 deprotonation product"
+    smiles: "CC(=O)[CH-]C(C)=O"
+    ref_formula: C5H7O2-
+    ref_mass: 99.04515303
+    pubchem_cid: null
+    source: "conjugate base of F1_acac (mass = F1_acac - H+)"
+  F1_alkoxide:
+    name: 2-methyl-4-oxopentan-2-olate (diacetone alcohol alkoxide)
+    role: "stage-1 reprotonation model (aldol alkoxide)"
+    smiles: "CC(=O)CC(C)(C)[O-]"
+    ref_formula: C6H11O2-
+    ref_mass: 115.07645316
+    pubchem_cid: null
+    source: "conjugate base of diacetone alcohol, PubChem 31256 (C6H12O2, 116.083729621), the acetone aldol"
+  F1_hd:
+    name: heptane-2,6-dione
+    role: "illustrative intramolecular aldol model of preprint v1.0 Scheme 1"
+    smiles: "CC(=O)CCCC(C)=O"
+    ref_formula: C7H12O2
+    ref_mass: 128.083729621
+    pubchem_cid: 100532
+    source: PubChem 100532
+  F1_hd_product:
+    name: 3-methylcyclohex-2-en-1-one
+    smiles: "CC1=CC(=O)CCC1"
+    ref_formula: C7H10O
+    ref_mass: 110.073164938
+    pubchem_cid: 14511
+    source: PubChem 14511
+  F2_krohn_ring1:
+    name: methyl 3-oxo-4-[2-(3-oxobutyl)phenyl]butanoate
+    role: "stage-2 truncated fragment of S2 for the first ring closure (benzylic C4 -> C3'' ketone)"
+    smiles: "COC(=O)CC(=O)Cc1ccccc1CCC(C)=O"
+    ref_formula: C15H18O4
+    ref_mass: null
+    pubchem_cid: null
+    source: "derived from S2 by replacing the anthraquinone with benzene and truncating 3,5-dioxohexyl to 3-oxobutyl"
+
+wire_and_bases:   # all PubChem
+  water: {smiles: "O", pubchem_cid: 962}
+  methanol: {smiles: "CO", pubchem_cid: 887}
+  isopropanol: {smiles: "CC(C)O", pubchem_cid: 3776, note: "solvent of the Krohn cyclisation (K2CO3, iPrOH/CH2Cl2)"}
+  hydroxide: {smiles: "[OH-]"}
+  methoxide: {smiles: "C[O-]"}
+  trimethylamine: {smiles: "CN(C)C", pubchem_cid: 1146, note: "small stand-in for Et3N in stage 1"}
+
+smarts:   # reaction-centre patterns; tests check the expected match counts
+  active_methylene_13dicarbonyl: "[CX4;H2,H1]([CX3]=[OX1])[CX3]=[OX1]"
+  benzylic_ketone_methylene: "[CX4;H2](c)[CX3](=[OX1])[#6]"
+  ketone_electrophile: "[#6][CX3](=[OX1])[#6]"
+  ester: "[CX3](=[OX1])[OX2][CH3]"
+  enolate_carbanion: "[CX3-,CX4-]([CX3]=[OX1])[CX3]=[OX1]"
+  alkoxide: "[OX1-][CX4]"
+  epoxide: "[C;r3]1[O;r3][C;r3]1"
+  aldol_ring_closure_rxn: "[C;H2,H1:1][C:2]=[O:3].[C:4]=[O:5]>>[C:1]([C:2]=[O:3])[C:4][O:5]"

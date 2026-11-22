@@ -60,7 +60,7 @@ def job_id(j):
 
 
 class RobustTBLite(TBLite):
-    """TBLite that retries a failed SCF from a fresh start (no cached wavefunction), then with an EEQ guess.
+    """TBLite that retries a failed SCF with a fresh calculator (no cached wavefunction), then with an EEQ guess.
     The Hamiltonian is unchanged, so converged energies are the same; only the SCF starting point differs."""
     retries = 0
 
@@ -68,17 +68,20 @@ class RobustTBLite(TBLite):
         properties = sorted(set(properties or []) | {"energy", "forces"})   # retries must keep forces
         try:
             return super().calculate(atoms, properties, system_changes or ["positions"])
-        except Exception:
+        except Exception as first:
             RobustTBLite.retries += 1
-            self.reset()
-            try:
-                return super().calculate(atoms, properties, ["positions", "numbers"])
-            except Exception:
-                self.reset(); self.set(guess="eeq")
+            params = dict(self.parameters)
+            for guess in ("sad", "eeq"):
+                fresh = TBLite(**{**params, "guess": guess})
+                a = atoms.copy(); a.calc = fresh
                 try:
-                    return super().calculate(atoms, properties, ["positions", "numbers"])
-                finally:
-                    self.set(guess="sad")
+                    e, f = a.get_potential_energy(), a.get_forces()
+                except Exception:
+                    continue
+                self.atoms = atoms.copy()
+                self.results = {"energy": e, "free_energy": e, "forces": f}
+                return
+            raise first
 
 
 def calc(charge, solvent, etemp=300.0):

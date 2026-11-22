@@ -92,8 +92,9 @@ the reactant complex relaxed, i.e. no barrier at this level), `product_not_minim
 `timeout` (20 min cap per job), `error`. Finished jobs are skipped on restart.
 
 ## Stage-1 results (engine run 2026-11-22, 324 jobs; GFN2-xTB/ALPB electronic energies, no ZPE/entropy)
-Status counts: 102 ok, 11 NEB not converged, 100 reactant not a minimum, 105 product not a minimum, 6 SCF errors
-(same 6 jobs failed again on retry). Full table: `data/stage1_summary.json`.
+Status counts: 102 ok, 15 NEB not converged, 100 reactant not a minimum, 105 product not a minimum, 2 SCF errors.
+Six jobs had SCF failures in the first run; after two retries (fresh-calculator fallback) 4 run but their NEB does not
+converge and 2 still fail the SCF. Full table: `data/stage1_summary.json` (run dirs `runs/stage1-20261122`, `-retry`, `-retry2`).
 - OH⁻ and MeO⁻ next to the acac C–H: the proton transfers during reactant relaxation (no barrier at this level). With
   a wire, relay barriers are 0.0–3.3 kcal/mol (mean over seeds), so a relay cannot lower an already barrierless step here.
 - NMe3 (neutral base), deprotonation barrier mean ± sd over converged seeds, kcal/mol:

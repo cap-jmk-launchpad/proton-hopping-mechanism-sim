@@ -177,7 +177,10 @@ def kinetics_block(R, TS, idx, primary, V1, V2):
     mDp = [kinetics.M_D if i == primary else kinetics.M_H for i in idx]
     f = kinetics.partial_hessian_freqs
     wRH, wTH = f(HR, mH), f(HT, mH)
-    out = {"nu_imag_H_cm": float(wTH[0]) if wTH[0] < 0 else None, "ts_partial_n_imag": int((wTH < 0).sum())}
+    n_imag = int((wTH < 0).sum())
+    out = {"nu_imag_H_cm": float(wTH[0]) if wTH[0] < 0 else None, "ts_partial_n_imag": n_imag,
+           # KIEs are only meaningful for a first-order saddle; the pilot (4-proton single band) had 4 imaginary modes
+           "kie_valid": n_imag == 1}
     for tag, mD in (("allD", mDall), ("primaryD", mDp)):
         wRD, wTD = f(HR, mD), f(HT, mD)
         kie = kinetics.kie_semiclassical(wRH, wTH, wRD, wTD)
@@ -287,7 +290,9 @@ def run_job(args):
                 t1 = time.time()
                 res["kinetics"] = kinetics_block(images[0], images[imax], idx, s["moving"][0][0], bf, br)
                 res["kinetics_wall_s"] = round(time.time() - t1, 1)
+        res["path_wall_s"] = round(time.time() - t0, 1); res["path_cpu_s"] = round(time.process_time() - c0, 1)
         if crest_threads and res.get("status") in ("ok", "neb_not_converged"):
+            signal.alarm(0)                  # CREST has its own --crest-timeout; the job cap covers the path only
             res.update(run_crest(od, R, q, j["solvent"], crest_threads, crest_timeout, s["moving"]))
     except build1b.InfeasibleGeometry as e:
         res.update(status="geometry_infeasible", error=str(e))

@@ -1,0 +1,120 @@
+{
+ "family": "C",
+ "base": "nme3",
+ "topology": "relay",
+ "solvent": "water",
+ "seed": 0,
+ "job": "C_triol_nme3_water_relay_s0",
+ "level": "GFN2-xTB/ALPB(water) via tblite",
+ "charge": 0,
+ "natoms": 49,
+ "moving": [
+  [
+   10,
+   3,
+   15
+  ],
+  [
+   24,
+   15,
+   19
+  ],
+  [
+   29,
+   19,
+   22
+  ],
+  [
+   33,
+   22,
+   37
+  ]
+ ],
+ "d_natural": null,
+ "E_R_eV": -1851.3799397447337,
+ "E_P_eV": -1851.1707936986083,
+ "R_converged": true,
+ "P_converged": true,
+ "R_steps": 124,
+ "P_steps": 107,
+ "R_class": {
+  "all_on_donor": true,
+  "all_on_acceptor": false,
+  "primary_on_donor": true,
+  "primary_off_donor": false,
+  "d_H_donor": [
+   1.093,
+   0.972,
+   0.982,
+   0.988
+  ],
+  "d_H_acceptor": [
+   2.095,
+   2.025,
+   1.814,
+   1.797
+  ]
+ },
+ "P_class": {
+  "all_on_donor": false,
+  "all_on_acceptor": true,
+  "primary_on_donor": false,
+  "primary_off_donor": true,
+  "d_H_donor": [
+   2.566,
+   2.046,
+   1.958,
+   1.689
+  ],
+  "d_H_acceptor": [
+   0.965,
+   0.968,
+   0.976,
+   1.051
+  ]
+ },
+ "dE_rxn_kcal": 4.823,
+ "wire_rearranged_R": false,
+ "wire_rearranged_P": false,
+ "neb_interp": "idpp",
+ "neb_etemp_K": 300.0,
+ "neb_failed_attempts": [],
+ "status": "timeout",
+ "neb_steps": 1338,
+ "E_band_eV": [
+  -1851.3799397775226,
+  -1851.3922885298437,
+  -1851.2925646039996,
+  -1851.0616207422613,
+  -1850.6770616252813,
+  -1847.6315910440087,
+  -1847.7695073532705,
+  -1850.1342954365064,
+  -1850.855516170615,
+  -1851.1701771520793,
+  -1851.1707936782727
+ ],
+ "i_max": 5,
+ "barrier_fwd_kcal": 86.439,
+ "barrier_rev_kcal": 81.616,
+ "ts_is_endpoint": false,
+ "kinetics": {
+  "nu_imag_H_cm": -225.1795191013253,
+  "ts_partial_n_imag": 4,
+  "kie_sc_allD": 41.978,
+  "nu_imag_D_allD_cm": -159.3,
+  "kie_wigner_allD": 42.985,
+  "kappa_eckart_H": null,
+  "kie_eckart_allD": null,
+  "kie_sc_primaryD": 22.037,
+  "nu_imag_D_primaryD_cm": -222.3,
+  "kie_wigner_primaryD": 22.063,
+  "kie_eckart_primaryD": null,
+  "kappa_wigner_H": 1.049
+ },
+ "kinetics_wall_s": 1.5,
+ "error": "job exceeded 2400 s",
+ "scf_retries": 1,
+ "wall_s": 2400.0,
+ "cpu_s_main": 347.0
+}

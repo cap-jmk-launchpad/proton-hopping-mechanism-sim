@@ -78,6 +78,7 @@ def test_job_grid():
 def test_segmented_path_runs_with_mock_calculator():
     """Plumbing test of the sequential-hop fallback with a Morse calculator (no xtb): returns a path and a barrier."""
     run1b = pytest.importorskip("run1b")
+    pytest.importorskip("ase")                      # CI installs rdkit/numpy/pyyaml/pytest only
     from types import SimpleNamespace
     from ase import Atoms
     from ase.calculators.morse import MorsePotential

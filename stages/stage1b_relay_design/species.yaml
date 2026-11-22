@@ -1,0 +1,49 @@
+# Stage 1b species. Atom-map numbers mark reactive atoms (used by build1b.py):
+#   carbon acids / substrates : :1 = C-H donor carbon, :2 = carbonyl O that receives the proton in a tautomerisation
+#   shuttles                  : :1 = acceptor atom, :2 = donor heavy atom (same atom for H2O, ROH)
+#   bases                     : :1 = acceptor atom
+#   wire molecules            : :1, :2, :3 = wire oxygens in relay order
+# ref_formula / ref_mass / pubchem_cid come from PubChem PUG-REST (queried 2026-11-22). Validated by validate1b.py.
+# All species are common laboratory solvents, reagents or textbook model compounds (mechanism study only).
+substrates:
+  acac:
+    smiles: "CC(=O)[CH2:1]C(C)=[O:2]"
+    charge: 0
+    pubchem_cid: 31261
+    ref_formula: C5H8O2
+    ref_mass: 100.052429494
+    role: "stage-1 model beta-diketone (C3-H carbon acid); keto->enol in family B"
+  dienone:
+    smiles: "[O:2]=C1[CH2:1]C=CC=C1"
+    charge: 0
+    pubchem_cid: 141125
+    ref_formula: C6H6O
+    ref_mass: 94.041864811
+    role: "cyclohexa-2,4-dien-1-one -> phenol: minimal model of the final aromatising keto->enol step after ring closure (Capponi et al. 1986)"
+  hq7:
+    smiles: "[OH:1]c1ccc2ccc[n:2]c2c1"
+    charge: 0
+    pubchem_cid: 135426866
+    ref_formula: C9H7NO
+    ref_mass: 145.052763847
+    role: "7-hydroxyquinoline: POSITIVE CONTROL only (O-H and ring N too far apart for direct transfer; wire geometry of Tanner et al. 2003)"
+shuttles:
+  water:    {smiles: "[OH2:1]", charge: 0, pubchem_cid: 962, ref_formula: H2O, ref_mass: 18.010564683, alpb: water}
+  methanol: {smiles: "C[OH:1]", charge: 0, pubchem_cid: 887, ref_formula: CH4O, ref_mass: 32.026214747, alpb: methanol}
+  acoh:     {smiles: "C[C](=[O:1])[OH:2]", charge: 0, pubchem_cid: 176, ref_formula: C2H4O2, ref_mass: 60.021129366}
+  pyridone: {smiles: "[O:1]=C1C=CC=C[NH:2]1", charge: 0, pubchem_cid: 8871, ref_formula: C5H5NO, ref_mass: 95.037113783}
+  phenol:   {smiles: "[OH:1]c1ccccc1", charge: 0, pubchem_cid: 996, ref_formula: C6H6O, ref_mass: 94.041864811}
+  hfip:     {smiles: "FC(F)(F)C([OH:1])C(F)(F)F", charge: 0, pubchem_cid: 13529, ref_formula: C3H2F6O, ref_mass: 168.00098366}
+bases:
+  nme3:     {smiles: "C[N:1](C)C", charge: 0, pubchem_cid: 1146, ref_formula: C3H9N, ref_mass: 59.073499291}
+  nmi:      {smiles: "CN1C=C[N:1]=C1", charge: 0, pubchem_cid: 1390, ref_formula: C4H6N2, ref_mass: 82.0530982}
+  acetate:  {smiles: "CC(=O)[O-:1]", charge: -1, pubchem_cid: 175, ref_formula: C2H3O2-, ref_mass: 59.013304334}
+wires:
+  triol:
+    smiles: "[OH:1][C@H]1C[C@@H]([OH:2])C[C@@H]([OH:3])C1"
+    charge: 0
+    pubchem_cid: 230351
+    ref_formula: C6H12O3
+    ref_mass: 132.078644241
+    stereo: all-cis   # checked by validate1b.py (all three O on the same ring face)
+    role: "all-cis cyclohexane-1,3,5-triol: three 1,3-diaxial OH groups as a preorganised intramolecular O-H...O chain (family C)"

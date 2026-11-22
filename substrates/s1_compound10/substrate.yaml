@@ -1,4 +1,4 @@
-name: "Platform compound 10 (F5-2, Scheme 2)"
-smiles: TODO  # to be provided by Julian; do not guess
+name: "Platform compound 10 (F5-2) -> stand-in: methyl 3,5,7-trioxooctanoate"
+smiles: "CC(=O)CC(=O)CC(=O)CC(=O)OC"   # PubChem 12787100; ambiguous, see ../structures.yaml (S1_compound10)
 charge: 0
 fragments: []

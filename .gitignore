@@ -1,4 +1,7 @@
 data/*
 !data/*.json
+!data/*.csv
 venv/
 *.out
+__pycache__/
+runs/

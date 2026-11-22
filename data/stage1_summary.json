@@ -1,0 +1,1972 @@
+{
+ "run_dir": "['runs/stage1-20261122', 'runs/stage1-20261122-retry', 'runs/stage1-20261122-retry2']",
+ "n_jobs": 324,
+ "level": "GFN2-xTB/ALPB (tblite), electronic energies",
+ "groups": [
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.042
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.117
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.051,
+   "barrier_max_kcal": 0.085,
+   "barrier_mean_kcal": 0.045,
+   "barrier_sd_kcal": 0.043,
+   "dE_rxn_median_kcal": -8.923
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.062
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.387,
+   "barrier_max_kcal": 0.598,
+   "barrier_mean_kcal": 0.328,
+   "barrier_sd_kcal": 0.303,
+   "dE_rxn_median_kcal": -11.756
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.026
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.0,
+   "barrier_max_kcal": 0.917,
+   "barrier_mean_kcal": 0.306,
+   "barrier_sd_kcal": 0.529,
+   "dE_rxn_median_kcal": -12.957
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.171
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.067,
+   "barrier_max_kcal": 0.133,
+   "barrier_mean_kcal": 0.067,
+   "barrier_sd_kcal": 0.094,
+   "dE_rxn_median_kcal": -12.904
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.265
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.151
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.163
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.053
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.328,
+   "barrier_median_kcal": 0.467,
+   "barrier_max_kcal": 1.127,
+   "barrier_mean_kcal": 0.641,
+   "barrier_sd_kcal": 0.427,
+   "dE_rxn_median_kcal": -11.984
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.377
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.384,
+   "barrier_median_kcal": 1.798,
+   "barrier_max_kcal": 1.937,
+   "barrier_mean_kcal": 1.373,
+   "barrier_sd_kcal": 0.859,
+   "dE_rxn_median_kcal": -11.486
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.561
+  },
+  {
+   "step": "deprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier_min_kcal": 0.018,
+   "barrier_median_kcal": 1.234,
+   "barrier_max_kcal": 2.45,
+   "barrier_mean_kcal": 1.234,
+   "barrier_sd_kcal": 1.72,
+   "dE_rxn_median_kcal": -12.268
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.629
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.532
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.019,
+   "barrier_median_kcal": 0.206,
+   "barrier_max_kcal": 0.238,
+   "barrier_mean_kcal": 0.154,
+   "barrier_sd_kcal": 0.118,
+   "dE_rxn_median_kcal": -11.889
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.824
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.509,
+   "barrier_median_kcal": 0.837,
+   "barrier_max_kcal": 0.946,
+   "barrier_mean_kcal": 0.764,
+   "barrier_sd_kcal": 0.227,
+   "dE_rxn_median_kcal": -11.444
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -1.463
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.0,
+   "barrier_max_kcal": 0.491,
+   "barrier_mean_kcal": 0.164,
+   "barrier_sd_kcal": 0.283,
+   "dE_rxn_median_kcal": -11.769
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.168
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.564,
+   "barrier_max_kcal": 0.872,
+   "barrier_mean_kcal": 0.479,
+   "barrier_sd_kcal": 0.442,
+   "dE_rxn_median_kcal": -11.453
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.106
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -1.83
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 1.938,
+   "barrier_max_kcal": 4.109,
+   "barrier_mean_kcal": 2.016,
+   "barrier_sd_kcal": 2.056,
+   "dE_rxn_median_kcal": -11.314
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -1.892
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier_min_kcal": 0.614,
+   "barrier_median_kcal": 1.693,
+   "barrier_max_kcal": 2.772,
+   "barrier_mean_kcal": 1.693,
+   "barrier_sd_kcal": 1.526,
+   "dE_rxn_median_kcal": -10.76
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.56
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier_min_kcal": 2.863,
+   "barrier_median_kcal": 2.939,
+   "barrier_max_kcal": 3.015,
+   "barrier_mean_kcal": 2.939,
+   "barrier_sd_kcal": 0.107,
+   "dE_rxn_median_kcal": -10.354
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -3.071
+  },
+  {
+   "step": "deprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "error": 1,
+    "ok": 2
+   },
+   "barrier_min_kcal": 2.961,
+   "barrier_median_kcal": 3.306,
+   "barrier_max_kcal": 3.652,
+   "barrier_mean_kcal": 3.306,
+   "barrier_sd_kcal": 0.489,
+   "dE_rxn_median_kcal": -10.177
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier_min_kcal": 9.686,
+   "barrier_median_kcal": 9.707,
+   "barrier_max_kcal": 9.727,
+   "barrier_mean_kcal": 9.707,
+   "barrier_sd_kcal": 0.029,
+   "dE_rxn_median_kcal": 9.566
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 8.439,
+   "barrier_median_kcal": 8.671,
+   "barrier_max_kcal": 9.016,
+   "barrier_mean_kcal": 8.709,
+   "barrier_sd_kcal": 0.29,
+   "dE_rxn_median_kcal": 8.671
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 11.053,
+   "barrier_median_kcal": 11.894,
+   "barrier_max_kcal": 14.742,
+   "barrier_mean_kcal": 12.563,
+   "barrier_sd_kcal": 1.933,
+   "dE_rxn_median_kcal": 4.135
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 6.186,
+   "barrier_median_kcal": 6.373,
+   "barrier_max_kcal": 6.7,
+   "barrier_mean_kcal": 6.42,
+   "barrier_sd_kcal": 0.26,
+   "dE_rxn_median_kcal": 5.491
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "ok": 2,
+    "neb_not_converged": 1
+   },
+   "barrier_min_kcal": 9.863,
+   "barrier_median_kcal": 10.009,
+   "barrier_max_kcal": 10.155,
+   "barrier_mean_kcal": 10.009,
+   "barrier_sd_kcal": 0.206,
+   "dE_rxn_median_kcal": 4.99
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 2.479,
+   "barrier_median_kcal": 4.187,
+   "barrier_max_kcal": 6.748,
+   "barrier_mean_kcal": 4.471,
+   "barrier_sd_kcal": 2.149,
+   "dE_rxn_median_kcal": 2.58
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "ok": 2,
+    "neb_not_converged": 1
+   },
+   "barrier_min_kcal": 16.302,
+   "barrier_median_kcal": 23.776,
+   "barrier_max_kcal": 31.249,
+   "barrier_mean_kcal": 23.776,
+   "barrier_sd_kcal": 10.569,
+   "dE_rxn_median_kcal": 3.801
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 1.935,
+   "barrier_median_kcal": 7.152,
+   "barrier_max_kcal": 7.771,
+   "barrier_mean_kcal": 5.619,
+   "barrier_sd_kcal": 3.206,
+   "dE_rxn_median_kcal": 5.598
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier_min_kcal": 16.056,
+   "barrier_median_kcal": 19.364,
+   "barrier_max_kcal": 22.672,
+   "barrier_mean_kcal": 19.364,
+   "barrier_sd_kcal": 4.678,
+   "dE_rxn_median_kcal": 2.565
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 1,
+   "status_counts": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier_min_kcal": 7.837,
+   "barrier_median_kcal": 7.837,
+   "barrier_max_kcal": 7.837,
+   "barrier_mean_kcal": 7.837,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 6.718
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 6.534,
+   "barrier_median_kcal": 6.667,
+   "barrier_max_kcal": 6.756,
+   "barrier_mean_kcal": 6.652,
+   "barrier_sd_kcal": 0.112,
+   "dE_rxn_median_kcal": 5.744
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier_min_kcal": 5.896,
+   "barrier_median_kcal": 6.409,
+   "barrier_max_kcal": 6.922,
+   "barrier_mean_kcal": 6.409,
+   "barrier_sd_kcal": 0.725,
+   "dE_rxn_median_kcal": 5.414
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 5.239,
+   "barrier_median_kcal": 5.333,
+   "barrier_max_kcal": 6.812,
+   "barrier_mean_kcal": 5.795,
+   "barrier_sd_kcal": 0.882,
+   "dE_rxn_median_kcal": 4.372
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 1,
+   "status_counts": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier_min_kcal": 17.821,
+   "barrier_median_kcal": 17.821,
+   "barrier_max_kcal": 17.821,
+   "barrier_mean_kcal": 17.821,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 5.01
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 1.632,
+   "barrier_median_kcal": 1.701,
+   "barrier_max_kcal": 2.582,
+   "barrier_mean_kcal": 1.972,
+   "barrier_sd_kcal": 0.53,
+   "dE_rxn_median_kcal": -1.533
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "ok": 2,
+    "neb_not_converged": 1
+   },
+   "barrier_min_kcal": 13.568,
+   "barrier_median_kcal": 15.826,
+   "barrier_max_kcal": 18.084,
+   "barrier_mean_kcal": 15.826,
+   "barrier_sd_kcal": 3.193,
+   "dE_rxn_median_kcal": 3.214
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 1.164,
+   "barrier_median_kcal": 1.223,
+   "barrier_max_kcal": 3.099,
+   "barrier_mean_kcal": 1.829,
+   "barrier_sd_kcal": 1.101,
+   "dE_rxn_median_kcal": -1.982
+  },
+  {
+   "step": "deprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 1,
+   "status_counts": {
+    "neb_not_converged": 1,
+    "error": 1,
+    "ok": 1
+   },
+   "barrier_min_kcal": 17.124,
+   "barrier_median_kcal": 17.124,
+   "barrier_max_kcal": 17.124,
+   "barrier_mean_kcal": 17.124,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 3.353
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.017
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.02
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.068
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.03
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 1.293
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.043
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 1.258
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.054
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.989
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.009
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.041
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.782
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.018
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -1.88
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.008
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.087
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.082
+  },
+  {
+   "step": "reprot",
+   "sink": "hydroxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.12
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.746
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 1.272
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.176
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 2.5
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.76
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.104
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.368
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.06
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.138
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 1,
+   "status_counts": {
+    "reactant_not_minimum": 1,
+    "ok": 1,
+    "product_not_minimum": 1
+   },
+   "barrier_min_kcal": 0.14,
+   "barrier_median_kcal": 0.14,
+   "barrier_max_kcal": 0.14,
+   "barrier_mean_kcal": 0.14,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.54
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier_min_kcal": 0.284,
+   "barrier_median_kcal": 0.678,
+   "barrier_max_kcal": 1.072,
+   "barrier_mean_kcal": 0.678,
+   "barrier_sd_kcal": 0.557,
+   "dE_rxn_median_kcal": -0.144
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -2.038
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.193
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -1.518
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 2.595
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -1.17
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.321
+  },
+  {
+   "step": "reprot",
+   "sink": "methoxide",
+   "solvent": "water",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "product_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -1.089
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.013
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.051
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.088
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.002
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 1,
+   "status_counts": {
+    "reactant_not_minimum": 2,
+    "ok": 1
+   },
+   "barrier_min_kcal": 0.058,
+   "barrier_median_kcal": 0.058,
+   "barrier_max_kcal": 0.058,
+   "barrier_mean_kcal": 0.058,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.146
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.05
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.415,
+   "barrier_median_kcal": 0.757,
+   "barrier_max_kcal": 0.827,
+   "barrier_mean_kcal": 0.666,
+   "barrier_sd_kcal": 0.22,
+   "dE_rxn_median_kcal": -14.602
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.094
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "methanol",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.026,
+   "barrier_max_kcal": 0.326,
+   "barrier_mean_kcal": 0.117,
+   "barrier_sd_kcal": 0.181,
+   "dE_rxn_median_kcal": -14.973
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 0,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.029
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 1,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.014
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 1,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "ok": 2,
+    "reactant_not_minimum": 1
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.195,
+   "barrier_max_kcal": 0.39,
+   "barrier_mean_kcal": 0.195,
+   "barrier_sd_kcal": 0.276,
+   "dE_rxn_median_kcal": -16.09
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 2,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.074
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 2,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 0.737,
+   "barrier_median_kcal": 1.382,
+   "barrier_max_kcal": 2.433,
+   "barrier_mean_kcal": 1.517,
+   "barrier_sd_kcal": 0.856,
+   "dE_rxn_median_kcal": -15.101
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 3,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": 0.0
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 3,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 3,
+   "status_counts": {
+    "ok": 3
+   },
+   "barrier_min_kcal": 1.12,
+   "barrier_median_kcal": 1.886,
+   "barrier_max_kcal": 2.231,
+   "barrier_mean_kcal": 1.746,
+   "barrier_sd_kcal": 0.569,
+   "dE_rxn_median_kcal": -15.199
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 4,
+   "topology": "direct",
+   "n_seeds": 3,
+   "n_ok": 0,
+   "status_counts": {
+    "reactant_not_minimum": 3
+   },
+   "barrier_min_kcal": null,
+   "barrier_median_kcal": null,
+   "barrier_max_kcal": null,
+   "barrier_mean_kcal": null,
+   "barrier_sd_kcal": null,
+   "dE_rxn_median_kcal": -0.042
+  },
+  {
+   "step": "reprot",
+   "sink": "nme3",
+   "solvent": "water",
+   "n": 4,
+   "topology": "relay",
+   "n_seeds": 3,
+   "n_ok": 2,
+   "status_counts": {
+    "ok": 2,
+    "neb_not_converged": 1
+   },
+   "barrier_min_kcal": 0.0,
+   "barrier_median_kcal": 0.655,
+   "barrier_max_kcal": 1.31,
+   "barrier_mean_kcal": 0.655,
+   "barrier_sd_kcal": 0.926,
+   "dE_rxn_median_kcal": -14.852
+  }
+ ]
+}

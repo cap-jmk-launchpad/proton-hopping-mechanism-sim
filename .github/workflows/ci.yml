@@ -7,12 +7,20 @@ permissions:
   contents: read
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, engine]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: pip install rdkit numpy pyyaml pytest
-      - run: python scripts/validate_structures.py --out /tmp/structures_validation.json
+      - name: Cached Python environment
+        run: |
+          set -euo pipefail
+          CACHE="${RUNNER_TOOL_CACHE}/proton-hopping-ci/python3/venv"
+          mkdir -p "$(dirname "$CACHE")" "${RUNNER_TOOL_CACHE}/pip-cache"
+          export PIP_CACHE_DIR="${RUNNER_TOOL_CACHE}/pip-cache"
+          if [ ! -x "$CACHE/bin/python" ]; then
+            python3 -m venv "$CACHE"
+          fi
+          "$CACHE/bin/pip" install -U pip
+          "$CACHE/bin/pip" install rdkit numpy pyyaml pytest
+          echo "$CACHE/bin" >> "$GITHUB_PATH"
+      - run: python scripts/validate_structures.py --out "${RUNNER_TEMP}/structures_validation.json"
       - run: pytest -q tests

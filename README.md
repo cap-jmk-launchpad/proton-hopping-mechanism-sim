@@ -84,11 +84,37 @@ python -m pytest -q tests
 cd stages/stage1_model_relays
 OMP_NUM_THREADS=1 nice -n 19 ionice -c3 python run_stage1.py --out /tmp/stage1-test --workers 2 --limit 4   # quick check
 OMP_NUM_THREADS=1 nohup nice -n 19 ionice -c3 python run_stage1.py --out RUN_DIR --workers 12 > stage1.log 2>&1 &
-python summarize.py RUN_DIR          # writes data/stage1_jobs.csv and data/stage1_summary.json
+python run_stage1.py --out RETRY_DIR --jobs JOB_ID ...   # retry selected jobs
+python summarize.py RUN_DIR [RETRY_DIR]   # writes data/stage1_jobs.csv and data/stage1_summary.json
 ```
 Statuses: `ok` (CI-NEB converged), `neb_not_converged`, `reactant_not_minimum` (the C–H/B–H proton left its donor while
 the reactant complex relaxed, i.e. no barrier at this level), `product_not_minimum` (the product complex relaxed back),
 `timeout` (20 min cap per job), `error`. Finished jobs are skipped on restart.
+
+## Stage-1 results (engine run 2026-11-22, 324 jobs; GFN2-xTB/ALPB electronic energies, no ZPE/entropy)
+Status counts: 102 ok, 11 NEB not converged, 100 reactant not a minimum, 105 product not a minimum, 6 SCF errors
+(same 6 jobs failed again on retry). Full table: `data/stage1_summary.json`.
+- OH⁻ and MeO⁻ next to the acac C–H: the proton transfers during reactant relaxation (no barrier at this level). With
+  a wire, relay barriers are 0.0–3.3 kcal/mol (mean over seeds), so a relay cannot lower an already barrierless step here.
+- NMe3 (neutral base), deprotonation barrier mean ± sd over converged seeds, kcal/mol:
+
+| solvent | n | relay | direct (n spectators) |
+|---|---|---|---|
+| water | 0 | 7.84 (1/3) | = relay |
+| water | 1 | 6.41 ± 0.72 (2/3) | 6.65 ± 0.11 (3/3) |
+| water | 2 | 17.82 (1/3) | 5.79 ± 0.88 (3/3) |
+| water | 3 | 15.83 ± 3.19 (2/3) | 1.97 ± 0.53 (3/3) |
+| water | 4 | 17.12 (1/3) | 1.83 ± 1.10 (3/3) |
+| methanol | 0 | 9.71 ± 0.03 (2/3) | = relay |
+| methanol | 1 | 12.56 ± 1.93 (3/3) | 8.71 ± 0.29 (3/3) |
+| methanol | 2 | 10.01 ± 0.21 (2/3) | 6.42 ± 0.26 (3/3) |
+| methanol | 3 | 23.78 ± 10.57 (2/3) | 4.47 ± 2.15 (3/3) |
+| methanol | 4 | 19.36 ± 4.68 (2/3) | 5.62 ± 3.21 (3/3) |
+
+- Reprotonation of the alkoxide: with BH = H2O or MeOH the protonated product is mostly not a minimum, and with
+  BH = HNMe3⁺ the reactant is mostly not a minimum, so there is no barrier to compare in most cells.
+- At this screening level the relay is not favoured over direct transfer for any base. This is not yet a test of H1:
+  stage 2 needs free energies (thermal corrections), DFT refinement and more seeds before any conclusion.
 
 ## Run the smoke test
 ```bash

@@ -1,0 +1,203 @@
+{
+ "S2_krohn12": {
+  "canonical_smiles": "COC(=O)CC(=O)Cc1c(CCC(=O)CC(C)=O)cc2c(c1O)C(=O)c1c(O)cc(OC)cc1C2=O",
+  "formula": "C26H24O10",
+  "mono_mass": 496.13695,
+  "inchikey": "SIEJMHVPHIPPLE-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": 2e-05,
+  "mass_ok": true,
+  "ok": true
+ },
+ "S2_product11": {
+  "canonical_smiles": "COC(=O)c1c(C)cc2c(c1O)-c1c(cc3c(c1O)C(=O)c1cc(OC)cc(O)c1C3=O)CC2",
+  "formula": "C26H20O8",
+  "mono_mass": 460.11582,
+  "inchikey": "ABUQYDLRMRVTKM-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": 2e-05,
+  "mass_ok": true,
+  "ok": true
+ },
+ "S1_compound10": {
+  "canonical_smiles": "COC(=O)CC(=O)CC(=O)CC(C)=O",
+  "formula": "C9H12O5",
+  "mono_mass": 200.06847,
+  "inchikey": "SIXWXDKITCMOQJ-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": -0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "S1_product": {
+  "canonical_smiles": "COC(=O)c1c(C)cc(O)cc1O",
+  "formula": "C9H10O4",
+  "mono_mass": 182.05791,
+  "inchikey": "NCCWCZLEACWJIN-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": 0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "S3_epoxypolyene": {
+  "canonical_smiles": "CC(=O)OC/C=C(\\C)CCC1OC1(C)C",
+  "formula": "C12H20O3",
+  "mono_mass": 212.14124,
+  "inchikey": "ICJOOVLSDYCSCJ-VQHVLOKHSA-N",
+  "formula_ok": true,
+  "mass_delta": -0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "F1_acac": {
+  "canonical_smiles": "CC(=O)CC(C)=O",
+  "formula": "C5H8O2",
+  "mono_mass": 100.05243,
+  "inchikey": "YRKCREAYFQTBPV-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": 0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "F1_enolate": {
+  "canonical_smiles": "CC(=O)[CH-]C(C)=O",
+  "formula": "C5H7O2-",
+  "mono_mass": 99.04515,
+  "inchikey": "CUJRVFIICFDLGR-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": -0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "F1_alkoxide": {
+  "canonical_smiles": "CC(=O)CC(C)(C)[O-]",
+  "formula": "C6H11O2-",
+  "mono_mass": 115.07645,
+  "inchikey": "UEGRKVSWAZNSCX-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": -0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "F1_hd": {
+  "canonical_smiles": "CC(=O)CCCC(C)=O",
+  "formula": "C7H12O2",
+  "mono_mass": 128.08373,
+  "inchikey": "VAIFYHGFLAPCON-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": 0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "F1_hd_product": {
+  "canonical_smiles": "CC1=CC(=O)CCC1",
+  "formula": "C7H10O",
+  "mono_mass": 110.07316,
+  "inchikey": "IITQJMYAYSNIMI-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "mass_delta": -0.0,
+  "mass_ok": true,
+  "ok": true
+ },
+ "F2_krohn_ring1": {
+  "canonical_smiles": "COC(=O)CC(=O)Cc1ccccc1CCC(C)=O",
+  "formula": "C15H18O4",
+  "mono_mass": 262.12051,
+  "inchikey": "YYEGOLOYKCKAIN-UHFFFAOYSA-N",
+  "formula_ok": true,
+  "ok": true
+ },
+ "_smarts_matches": {
+  "active_methylene_13dicarbonyl": {
+   "S2_krohn12": 2,
+   "S2_product11": 0,
+   "S1_compound10": 3,
+   "S1_product": 0,
+   "S3_epoxypolyene": 0,
+   "F1_acac": 1,
+   "F1_enolate": 0,
+   "F1_alkoxide": 0,
+   "F1_hd": 0,
+   "F1_hd_product": 0,
+   "F2_krohn_ring1": 1
+  },
+  "benzylic_ketone_methylene": {
+   "S2_krohn12": 1,
+   "S2_product11": 0,
+   "S1_compound10": 0,
+   "S1_product": 0,
+   "S3_epoxypolyene": 0,
+   "F1_acac": 0,
+   "F1_enolate": 0,
+   "F1_alkoxide": 0,
+   "F1_hd": 0,
+   "F1_hd_product": 0,
+   "F2_krohn_ring1": 1
+  },
+  "ketone_electrophile": {
+   "S2_krohn12": 5,
+   "S2_product11": 2,
+   "S1_compound10": 3,
+   "S1_product": 0,
+   "S3_epoxypolyene": 0,
+   "F1_acac": 2,
+   "F1_enolate": 2,
+   "F1_alkoxide": 1,
+   "F1_hd": 2,
+   "F1_hd_product": 1,
+   "F2_krohn_ring1": 2
+  },
+  "ester": {
+   "S2_krohn12": 1,
+   "S2_product11": 1,
+   "S1_compound10": 1,
+   "S1_product": 1,
+   "S3_epoxypolyene": 0,
+   "F1_acac": 0,
+   "F1_enolate": 0,
+   "F1_alkoxide": 0,
+   "F1_hd": 0,
+   "F1_hd_product": 0,
+   "F2_krohn_ring1": 1
+  },
+  "enolate_carbanion": {
+   "S2_krohn12": 0,
+   "S2_product11": 0,
+   "S1_compound10": 0,
+   "S1_product": 0,
+   "S3_epoxypolyene": 0,
+   "F1_acac": 0,
+   "F1_enolate": 1,
+   "F1_alkoxide": 0,
+   "F1_hd": 0,
+   "F1_hd_product": 0,
+   "F2_krohn_ring1": 0
+  },
+  "alkoxide": {
+   "S2_krohn12": 0,
+   "S2_product11": 0,
+   "S1_compound10": 0,
+   "S1_product": 0,
+   "S3_epoxypolyene": 0,
+   "F1_acac": 0,
+   "F1_enolate": 0,
+   "F1_alkoxide": 1,
+   "F1_hd": 0,
+   "F1_hd_product": 0,
+   "F2_krohn_ring1": 0
+  },
+  "epoxide": {
+   "S2_krohn12": 0,
+   "S2_product11": 0,
+   "S1_compound10": 0,
+   "S1_product": 0,
+   "S3_epoxypolyene": 1,
+   "F1_acac": 0,
+   "F1_enolate": 0,
+   "F1_alkoxide": 0,
+   "F1_hd": 0,
+   "F1_hd_product": 0,
+   "F2_krohn_ring1": 0
+  }
+ }
+}

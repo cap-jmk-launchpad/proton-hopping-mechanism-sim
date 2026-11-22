@@ -65,17 +65,18 @@ class RobustTBLite(TBLite):
     retries = 0
 
     def calculate(self, atoms=None, properties=None, system_changes=None):
+        properties = sorted(set(properties or []) | {"energy", "forces"})   # retries must keep forces
         try:
-            return super().calculate(atoms, properties or ["energy", "forces"], system_changes or ["positions"])
+            return super().calculate(atoms, properties, system_changes or ["positions"])
         except Exception:
             RobustTBLite.retries += 1
             self.reset()
             try:
-                return super().calculate(atoms, properties or ["energy", "forces"], ["positions", "numbers"])
+                return super().calculate(atoms, properties, ["positions", "numbers"])
             except Exception:
                 self.reset(); self.set(guess="eeq")
                 try:
-                    return super().calculate(atoms, properties or ["energy", "forces"], ["positions", "numbers"])
+                    return super().calculate(atoms, properties, ["positions", "numbers"])
                 finally:
                     self.set(guess="sad")
 
@@ -182,8 +183,11 @@ def main():
     ap.add_argument("--out", required=True); ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
     ap.add_argument("--only-n", type=int, nargs="+"); ap.add_argument("--limit", type=int)
+    ap.add_argument("--jobs", nargs="+", help="run only these job ids (e.g. to retry failed jobs)")
     a = ap.parse_args()
     J = jobs(a.seeds, a.only_n)
+    if a.jobs:
+        J = [j for j in J if job_id(j) in set(a.jobs)]
     if a.limit:
         J = J[:a.limit]
     Path(a.out).mkdir(parents=True, exist_ok=True)

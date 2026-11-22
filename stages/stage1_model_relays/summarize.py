@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Summarise stage-1 results: per-job CSV and per-condition relay-vs-direct table (min and spread over seeds).
 
-Usage: python summarize.py RUN_DIR [--out-dir ../../data]
+Usage: python summarize.py RUN_DIR [RUN_DIR ...] [--out-dir ../../data]   (later dirs override earlier ones per job)
 Status meanings: ok = CI-NEB converged; neb_not_converged; reactant_not_minimum = the primary proton left its donor
 while the reactant complex was relaxed (no barrier at this level); product_not_minimum = the product complex
 relaxed back to the reactant (no stable product at this level); timeout; error.
@@ -10,16 +10,22 @@ import argparse, csv, json, statistics as st
 from collections import defaultdict
 from pathlib import Path
 
-KEYS = ["job", "step", "sink", "solvent", "n", "topology", "seed", "natoms", "charge", "status",
+KEYS = ["job", "run_dir", "step", "sink", "solvent", "n", "topology", "seed", "natoms", "charge", "status",
         "dE_rxn_kcal", "barrier_fwd_kcal", "barrier_rev_kcal", "ts_is_endpoint", "wire_rearranged_R",
         "wire_rearranged_P", "neb_interp", "neb_etemp_K", "neb_steps", "scf_retries", "wall_s"]
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("run_dir")
+    ap = argparse.ArgumentParser(); ap.add_argument("run_dir", nargs="+")
     ap.add_argument("--out-dir", default=str(Path(__file__).resolve().parents[2] / "data"))
     a = ap.parse_args()
-    rows = [json.load(open(p)) for p in sorted(Path(a.run_dir).glob("*/result.json"))]
+    by_job = {}
+    for rd in a.run_dir:
+        for p in sorted(Path(rd).glob("*/result.json")):
+            if ".failed-attempt" in p.parent.name:   # superseded attempts are kept on disk but not summarised
+                continue
+            r = json.load(open(p)); r["run_dir"] = str(rd); by_job[r["job"]] = r
+    rows = [by_job[k] for k in sorted(by_job)]
     out = Path(a.out_dir); out.mkdir(parents=True, exist_ok=True)
     with open(out / "stage1_jobs.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=KEYS, extrasaction="ignore"); w.writeheader(); w.writerows(rows)
@@ -38,14 +44,16 @@ def main():
                           barrier_min_kcal=min(bar) if bar else None,
                           barrier_median_kcal=round(st.median(bar), 3) if bar else None,
                           barrier_max_kcal=max(bar) if bar else None,
+                          barrier_mean_kcal=round(st.mean(bar), 3) if bar else None,
+                          barrier_sd_kcal=round(st.stdev(bar), 3) if len(bar) > 1 else None,
                           dE_rxn_median_kcal=round(st.median([r["dE_rxn_kcal"] for r in rs if r.get("dE_rxn_kcal") is not None]), 3)
                           if any(r.get("dE_rxn_kcal") is not None for r in rs) else None))
     json.dump({"run_dir": str(a.run_dir), "n_jobs": len(rows), "level": "GFN2-xTB/ALPB (tblite), electronic energies",
                "groups": table}, open(out / "stage1_summary.json", "w"), indent=1)
     print(f"{len(rows)} jobs")
-    print(f"{'step':6s} {'sink':9s} {'solv':8s} n {'topology':7s} ok/seeds  barrier min/med/max (kcal/mol)  dE_rxn med  statuses")
+    print(f"{'step':6s} {'sink':9s} {'solv':8s} n {'topology':7s} ok/seeds  barrier mean+-sd (kcal/mol)  dE_rxn med  statuses")
     for t in table:
-        b = "/".join("-" if t[x] is None else f"{t[x]:.1f}" for x in ("barrier_min_kcal", "barrier_median_kcal", "barrier_max_kcal"))
+        b = "-" if t["barrier_mean_kcal"] is None else (f"{t['barrier_mean_kcal']:.2f}" + ("" if t["barrier_sd_kcal"] is None else f" +- {t['barrier_sd_kcal']:.2f}"))
         print(f"{t['step']:6s} {t['sink']:9s} {t['solvent']:8s} {t['n']} {t['topology']:7s} {t['n_ok']}/{t['n_seeds']}      {b:22s} "
               f"{'-' if t['dE_rxn_median_kcal'] is None else t['dE_rxn_median_kcal']:>8}  {t['status_counts']}")
 

@@ -73,3 +73,30 @@ def test_job_grid():
     ids = [run1b.job_id(j) for j in J]
     assert len(ids) == len(set(ids)) == 660
     assert run1b.parse_job_id("C_triol_nme3_water_relay_sh2_s0")["shell"] == 2
+
+
+def test_segmented_path_runs_with_mock_calculator():
+    """Plumbing test of the sequential-hop fallback with a Morse calculator (no xtb): returns a path and a barrier."""
+    run1b = pytest.importorskip("run1b")
+    from types import SimpleNamespace
+    from ase import Atoms
+    from ase.calculators.morse import MorsePotential
+    from ase.optimize import BFGS
+
+    def calc(q, solvent, etemp=300.0):
+        return MorsePotential(epsilon=1.0, r0=1.0, rho0=6.0)
+
+    def relax(a, q, solvent, fmax=0.05, steps=200):
+        a.calc = calc(q, solvent); opt = BFGS(a, logfile=None); conv = opt.run(fmax=fmax, steps=steps)
+        return float(a.get_potential_energy()), bool(conv), int(opt.nsteps)
+
+    def classify(pos, moving):
+        d = lambda i, k: float(np.linalg.norm(pos[i] - pos[k]))
+        return {"all_on_acceptor": all(d(h, a) < d(h, dn) for h, dn, a in moving)}
+
+    s1 = SimpleNamespace(calc=calc, relax=relax, classify=classify, NEB_ATTEMPTS=(("linear", 300.0),))
+    X = np.array([[0, 0, 0], [1.0, 0, 0], [2.6, 0.3, 0], [3.6, 0.3, 0], [5.2, 0, 0]])
+    s = {"symbols": ["H"] * 5, "positions": X, "moving": [(1, 0, 2), (3, 2, 4)]}
+    R = Atoms("H5", positions=X); relax(R, 0, None)
+    out = run1b.run_segmented(R, s, 0, None, s1)
+    assert "seg_barrier_kcal" in out and len(out["intermediates"]) == 2 and len(out["segments"]) >= 1

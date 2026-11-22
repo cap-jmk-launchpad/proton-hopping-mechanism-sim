@@ -114,6 +114,46 @@ def run_neb(R, P, q, solvent, interp, etemp, calc):
     return images, E, bool(conv), n1 + int(opt.nsteps)
 
 
+SEGMENT_TRIGGER_KCAL = 40.0   # single-band barrier above this (or a non-converged band) triggers the segmented path
+
+
+def run_segmented(R, s, q, solvent, s1, constraint=None):
+    """Sequential-hop path for relays: intermediates I_k with the first k protons moved (k = 1..n), each relaxed;
+    CI-NEB between consecutive minima. Effective barrier = highest image on the whole path relative to R.
+    Intermediates that do not stay minima (proton returns) are recorded; the path then uses the remaining ones."""
+    from ase import Atoms
+    from ase.constraints import FixBondLength
+    nodes, info = [R], []
+    for k in range(1, len(s["moving"]) + 1):
+        part = dict(s, moving=s["moving"][:k])
+        X = build1b.product_guess(dict(part, positions=R.get_positions()))
+        I = Atoms(s["symbols"], positions=X)
+        if constraint:
+            I.set_constraint(FixBondLength(*constraint))
+        e, cv, ns = s1.relax(I, q, solvent)
+        kc = s1.classify(I.positions, s["moving"][:k])
+        info.append({"k": k, "E_rel_kcal": round((e - nodes[0].get_potential_energy()) * EV2KCAL, 3),
+                     "all_k_moved": kc["all_on_acceptor"], "converged": cv})
+        if kc["all_on_acceptor"] or k == len(s["moving"]):
+            nodes.append(I)
+    E0 = float(nodes[0].get_potential_energy()); path_E, conv_all, segs = [], True, []
+    for a, b in zip(nodes[:-1], nodes[1:]):
+        fails = []
+        for interp, etemp in s1.NEB_ATTEMPTS:
+            try:
+                images, E, conv, nst = run_neb(a, b, q, solvent, interp, etemp, s1.calc)
+                break
+            except Exception as e:
+                fails.append(f"{interp}/{etemp}: {e!r}")
+        else:
+            raise RuntimeError("segment NEB failed: " + " | ".join(fails))
+        conv_all &= conv; segs.append({"steps": nst, "converged": conv})
+        path_E += [float(x) for x in E]
+    Erel = (np.array(path_E) - E0) * EV2KCAL
+    return {"segments": segs, "intermediates": info, "seg_barrier_kcal": round(float(Erel.max()), 3),
+            "seg_converged": bool(conv_all), "seg_E_path_kcal": [round(float(x), 3) for x in Erel]}
+
+
 def partial_hessian(atoms, idx, delta=0.005):
     """Central-difference Hessian block (eV/A^2) over atoms idx, unconstrained forces."""
     m = len(idx); Hh = np.zeros((3 * m, 3 * m)); X0 = atoms.get_positions().copy()
@@ -235,6 +275,13 @@ def run_job(args):
                        status="ok" if conv else "neb_not_converged", neb_steps=nst, E_band_eV=E.tolist(),
                        i_max=imax, barrier_fwd_kcal=round(bf, 3), barrier_rev_kcal=round(br, 3),
                        ts_is_endpoint=imax in (0, len(E) - 1))
+            if len(s["moving"]) > 1 and (not conv or bf > SEGMENT_TRIGGER_KCAL):
+                t2 = time.time()
+                try:
+                    res["segmented"] = run_segmented(R, s, q, j["solvent"], s1, s.get("constraint"))
+                except Exception as e:
+                    res["segmented"] = {"error": repr(e)}
+                res["segmented_wall_s"] = round(time.time() - t2, 1)
             if not res["ts_is_endpoint"]:
                 idx = sorted({h for h, _, _ in s["moving"]})
                 t1 = time.time()

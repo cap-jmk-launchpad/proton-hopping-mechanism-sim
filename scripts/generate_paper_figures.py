@@ -83,7 +83,7 @@ ax2.plot(d_nme3_wat_rel, rel_nme3_wat, "-^", color=C_CYAN, lw=1.8, ms=5.5, label
 ax2.axhspan(0, 20, color=C_GREEN, alpha=0.08, label="Pre-registered ceiling (20 kcal mol$^{-1}$)")
 ax2.set_xlabel("Fixed distance $d(\\mathrm{C3}\\cdots\\mathrm{base})$ (\\AA)")
 ax2.set_ylabel("Median barrier $\\Delta E_{\\mathrm{act}}$ (kcal mol$^{-1}$)")
-ax2.set_title("(b) Held-off base crossover (Family A)", loc="left", fontweight="bold")
+ax2.set_title("(b) Held-off base distance crossover", loc="left", fontweight="bold")
 ax2.set_xticks([4.0, 5.0, 6.0, 7.0])
 ax2.set_ylim(0, 120)
 ax2.grid(axis="y", ls=":", alpha=0.5)

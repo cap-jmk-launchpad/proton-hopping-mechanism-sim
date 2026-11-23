@@ -170,7 +170,7 @@ for i in sel:
 for i in sel:
     ax.scatter(*P2[i], s=18 if sym[i] == "H" else 60, c=col[sym[i]], edgecolors="black", linewidths=0.6, zorder=3)
 off = {"DQH:C10": (-52, -14), "DQH:O27": (6, -16), "ASP57:OD2": (8, 4), "HIS128:NE2": (8, -4),
-       "HOH259:O": (-48, 6), "HOH266:O": (8, 6), "HOH234:O": (8, 4)}
+       "HOH259:O": (-58, -10), "HOH266:O": (8, 6), "HOH234:O": (8, 4)}
 for name in key:
     ax.annotate(name.replace(":", " "), P2[idx[name]], textcoords="offset points", xytext=off[name], fontsize=8,
                 bbox=dict(fc="white", ec="none", pad=0.8, alpha=0.85), zorder=7)
@@ -187,7 +187,7 @@ txt = "Distances in relaxed cluster (Å)\n" + "\n".join(f"{a.split(':')[1]}{'' i
 ax.text(1.0, 0.99, txt, transform=ax.transAxes, ha="right", va="top", fontsize=7.5,
         bbox=dict(fc="white", ec=GREEN, pad=3))
 ax.set_aspect("equal"); ax.axis("off")
-ax.set_title("Relaxed TcmN active site (PDB 3TVQ, seed $s_7$), best-fit projection of the key atoms", fontsize=9, loc="left")
+ax.set_title("Relaxed TcmN active site (PDB 3TVQ), best-fit projection of the key atoms", fontsize=9, loc="left")
 fig.tight_layout()
 fig.savefig(OUT / "fig6_tcmn_active_site.pdf", bbox_inches="tight")
 plt.close(fig)

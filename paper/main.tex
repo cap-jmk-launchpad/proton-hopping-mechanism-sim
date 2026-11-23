@@ -1,5 +1,5 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[margin=2.2cm]{geometry}
+\documentclass[10pt,twocolumn,a4paper]{article}
+\usepackage[margin=1.65cm,columnsep=0.6cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
 \emergencystretch=3em\sloppy
@@ -17,6 +17,8 @@
 \date{23 November 2026}
 
 \begin{document}
+\twocolumn[
+\begin{@twocolumnfalse}
 \maketitle
 
 \begin{abstract}
@@ -24,6 +26,9 @@ Nature builds the polycyclic cores of tetracycline and aromatic polyketide antib
 \end{abstract}
 
 \noindent\textbf{Keywords:} proton relay; Grotthuss mechanism; polyketide cyclisation; TcmN aromatase/cyclase; bioinspired catalysis; metal-diketone complexes; GFN2-xTB.
+\vspace{1.2em}
+\end{@twocolumnfalse}
+]
 
 \section{Introduction}
 Tetracyclines and related aromatic polyketides remain essential broad-spectrum antibiotics, yet fluctuating clinical demand and emerging resistance call for flexible, atom-economic routes to diverse scaffold variants \cite{myers2005sci,myers2005jacs}. Whereas convergent total synthesis reaches the key tetracycline precursor in 11 steps from benzoic acid \cite{myers2001,myers2005sci}, nature constructs polycyclic aromatic polyketides through regioselective aldol and Claisen cyclisation cascades of linear polycarbonyl chains catalysed by type~II polyketide synthase aromatase/cyclases (ARO/CYCs) such as TcmN, WhiE-ORFVI, and ZhuI \cite{shen1995,shen1996,ames2008,zhou2010,ames2011,lee2012,caldara2015}. Non-enzymatic biomimetic cyclisations of unprotected or partially protected polyketones under basic conditions (such as $\text{K}_2\text{CO}_3$ in $i\text{PrOH}/\text{CH}_2\text{Cl}_2$ or methanolic alkoxides) also form polycyclic aromatic products \cite{harris1975,hayat1999,krohn1999,krohn2000,krohn2002,barrett2018,barrett2019,sparr2020}, though unassisted cyclisation of long polyketide chains in solution often yields unselective shunt products \cite{shen1995,shen1996}.
@@ -40,12 +45,12 @@ We report a falsification-driven computational study of hypotheses H1 and H2 acr
 \end{enumerate}
 
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig4_mechanism_schematic.pdf}
 \caption{Schematic of the three regimes resolved in this work. (a) An unhindered base moves into direct contact with the carbon acid ($R_{\text{DA}} \approx 2.7$\,\AA{} at the transition state) and transfers the proton directly. (b) A loose water wire in bulk solution must be assembled and polarised, which raises the barrier. (c) A base held off the carbon acid, by tethering, bulky substituents, or a protein pocket, can only receive the proton through a bridging water. Barrier ranges are the values reported in Tables~\ref{tab:stage1}--\ref{tab:stage1c}.}
 \label{fig:fig4}
-\end{figure}
+\end{figure*}
 
 \section{Computational Methods}
 \subsection{Substrates, Model Fragments, and Provenance Validation}
@@ -57,12 +62,12 @@ Three polyketide and polyene reference substrates and ten model fragments and ba
 \item \textbf{Model species (Figure~\ref{fig:fig7}):} pentane-2,4-dione (acetylacetone, $\text{C}_5\text{H}_8\text{O}_2$, CID 31261) \cite{alagona2010}, its C3 enolate ($\text{C}_5\text{H}_7\text{O}_2^-$), diacetone alcohol alkoxide ($\text{C}_6\text{H}_{11}\text{O}_2^-$, conjugate base of CID 31256), cyclohexa-2,4-dien-1-one ($\text{C}_6\text{H}_6\text{O}$, CID 141125) and its aromatic tautomer phenol (CID 996) \cite{capponi1986}, \textit{all-cis} cyclohexane-1,3,5-triol ($\text{C}_6\text{H}_{12}\text{O}_3$, CID 230351), 7-hydroxyquinoline ($\text{C}_9\text{H}_7\text{NO}$, CID 135426866) \cite{tanner2003}, 2-pyridone ($\text{C}_5\text{H}_5\text{NO}$, CID 8871) \cite{swain1952}, acetic acid and acetate (CID 176 and 175), $N$-methylimidazole (NMI, CID 1390), trimethylamine ($\text{NMe}_3$, CID 1146), 1,1,1,3,3,3-hexafluoropropan-2-ol (HFIP, CID 13529) \cite{colomer2017}, 2,6-di-\textit{tert}-butyl-4-methylpyridine (DTBMP, $\text{C}_{14}\text{H}_{23}\text{N}$, CID 138316, $205.18305$\,Da), 2,2,6,6-tetramethylpiperidine (TMP, $\text{C}_9\text{H}_{19}\text{N}$, CID 64963, $141.15175$\,Da), 1,8-diazabicyclo[5.4.0]undec-7-ene (DBU, $\text{C}_9\text{H}_{16}\text{N}_2$, CID 81184, $152.13135$\,Da), and 1,5,7-triazabicyclo[4.4.0]dec-5-ene (TBD, $\text{C}_6\text{H}_{11}\text{N}_3$, CID 79837, $125.09530$\,Da).
 \end{itemize}
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig7_chemical_structures.pdf}
 \caption{Two-dimensional chemical structures and molecular formulas of the substrates, bifunctional and preorganised scaffolds, sterically hindered bases, and Lewis-acid diketone chelates evaluated in this study.}
 \label{fig:fig7}
-\end{figure}
+\end{figure*}
 
 
 \subsection{Solution-Phase Model Relays, Relaxed Scans, and DFT Check}
@@ -102,7 +107,7 @@ Protonation states at pH $7.0$ were assigned with PROPKA 3.5.1 and OpenMM Modell
 \subsection{Solution Models: Why Free Wires Fail to Beat Direct Transfer}
 In the 324-path solution CI-NEB screen, placing strong anionic bases ($\text{OH}^-$ or $\text{MeO}^-$) adjacent to acetylacetone C3--H resulted in barrierless proton abstraction during reactant relaxation (\texttt{reactant\_not\_minimum}, 100 of 324 paths), while alkoxide reprotonation by weak acids ($\text{H}_2\text{O}$, $\text{MeOH}$) collapsed back to reactants during product relaxation (\texttt{product\_not\_minimum}, 105 of 324 paths). Only neutral $\text{NMe}_3$ yielded well-defined reactant and product minima across $n = 0$--$4$ wires (Table~\ref{tab:stage1}, Figure~\ref{fig:fig1}a).
 
-\begin{table}[htbp]
+\begin{table*}[t]
 \centering
 \caption{Pilot diagnostic solution-phase deprotonation barriers ($\Delta E_{\text{act}}$, kcal\,mol$^{-1}$, mean $\pm$ SD across $N_{\text{seed}} = 3$ seeds, with converged seed count $k$ out of 3) for acetylacetone $\text{C3--H} + \text{NMe}_3 + (\text{H}_2\text{O})_n$ in GFN2-xTB/ALPB(water) across static CI-NEB, 1D and 2D proton-coordinate scans (M1 and M1b), and 2D $(q, R_{\text{DA}})$ donor--acceptor grids (M1c), alongside the $\omega$B97X-D3(BJ)/def2-TZVP//def2-SVP/IEF-PCM DFT check.}
 \label{tab:stage1}
@@ -114,7 +119,7 @@ $n$ & Topology & CI-NEB $\Delta E_{\text{act}}$ & M1 ($11\times 11$ / 1D) & M1b 
 \midrule
 0 & Contact pair & $7.84$ ($k=1$) & $7.87 \pm 0.03$ ($k=3$) & $7.92 \pm 0.16$ ($k=3$) & n/a & n/a \\
 1 & Direct (1 spectator) & $6.65 \pm 0.11$ ($k=3$) & $6.78 \pm 0.03$ ($k=3$) & $6.89 \pm 0.04$ ($k=3$) & $6.53 \pm 0.26$ ($k=3$) & n/a \\
-1 & Relay (2 hops) & $6.41 \pm 0.72$ ($k=2$) & $15.43 \pm 1.27$ ($k=3$) & $13.87 \pm 1.65$ ($k=3$) & $7.65 \pm 3.03$ ($k=3$) & $6.61$ ($4.89$, $s_1$) \\
+1 & Relay (2 hops) & $6.41 \pm 0.72$ ($k=2$) & $15.43 \pm 1.27$ ($k=3$) & $13.87 \pm 1.65$ ($k=3$) & $7.65 \pm 3.03$ ($k=3$) & $6.61$ ($4.89$, Seed~1) \\
 2 & Direct (2 spectators) & $5.79 \pm 0.88$ ($k=3$) & $5.62 \pm 0.06$ ($k=3$) & $5.93 \pm 0.16$ ($k=3$) & $5.06 \pm 0.22$ ($k=3$) & n/a \\
 2 & Relay (3 hops) & $17.82$ ($k=1$) & $13.44 \pm 0.58$ ($k=3$) & $16.27 \pm 0.26$ ($k=3$) & $4.34 \pm 1.16$ ($k=3$)$^{\text{a}}$ & n/a \\
 3 & Direct (3 spectators) & $1.97 \pm 0.53$ ($k=3$) & $4.25 \pm 0.16$ ($k=3$) & $5.35 \pm 0.60$ ($k=3$) & n/a & n/a \\
@@ -124,21 +129,21 @@ $n$ & Topology & CI-NEB $\Delta E_{\text{act}}$ & M1 ($11\times 11$ / 1D) & M1b 
 \begin{flushleft}
 \footnotesize $^{\text{a}}$In M1c ($21\times 9$ grid over $q \in [q_{\text{R}}, +1.8]$\,\AA{} and $R_{\text{DA}} \in [2.55, 3.75]$\,\AA{}), the forward-sweep relay barriers are $14.77 \pm 1.50$\,kcal\,mol$^{-1}$ ($n=1$) and $23.28 \pm 2.12$\,kcal\,mol$^{-1}$ ($n=2$); the lower backward-sweep values reflect hysteresis ($21.7$--$41.6$\,kcal\,mol$^{-1}$) from heavy-atom wire rearrangement. For $N_{\text{seed}} = 3$, 95\% Wilson CIs on convergence rates are $[44\%, 100\%]$ ($k=3$), $[21\%, 94\%]$ ($k=2$), and $[6\%, 79\%]$ ($k=1$).
 \end{flushleft}
-\end{table}
+\end{table*}
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig1_solution_vs_heldoff.pdf}
 \caption{(a) Solution-phase activation barriers ($\Delta E_{\text{act}}$, mean $\pm$ SD across $N_{\text{seed}} = 3$ seeds) for acetylacetone $\text{C3--H}$ deprotonation by $\text{NMe}_3$ in GFN2-xTB/ALPB(water) as a function of water wire length $n$, comparing 1D relaxed direct scans, 2D $11\times 11$ relay grids, static CI-NEB, and the $\omega$B97X-D3(BJ)/def2-TZVP//def2-SVP/IEF-PCM single-water relay transition state ($\Delta G_{\text{act,TZ}} = 6.61$\,kcal\,mol$^{-1}$). (b) Distance crossover when the base ($\text{NMI}$ or $\text{NMe}_3$) is held at fixed distance $d(\text{C3}\cdots\text{base}) \in [4.0, 7.0]$\,\AA{}, showing the direct barrier spiking to $89.11$--$111.64$\,kcal\,mol$^{-1}$ at $d \ge 5.0$\,\AA{} while $1$--$2$-molecule water or methanol relays remain flat at $5.80$--$15.95$\,kcal\,mol$^{-1}$.}
 \label{fig:fig1}
-\end{figure}
+\end{figure*}
 
 As shown in Table~\ref{tab:stage1} and Figure~\ref{fig:fig1}a, when $\text{NMe}_3$ is free to move in solution, it compresses to $R_{\text{DA}}(\text{C3}\cdots\text{N}) = 2.70$\,\AA{} at the transition state, and the spectator waters solvate the developing enolate oxygens. Consequently, the direct-transfer barrier decreases monotonically with added spectator waters from $7.87 \pm 0.03$\,kcal\,mol$^{-1}$ ($n=0$) to $6.78 \pm 0.03$ ($n=1$), $5.62 \pm 0.06$ ($n=2$), and $4.25 \pm 0.16$\,kcal\,mol$^{-1}$ ($n=3$). By contrast, forcing the proton through the water wire in the relay topology yields barriers of $15.43 \pm 1.27$ ($n=1$), $13.44 \pm 0.58$ ($n=2$), and $16.72 \pm 0.57$\,kcal\,mol$^{-1}$ ($n=3$) on the $11\times 11$ 2D grid, with concerted transfer at $n=1$ and stepwise hydronium-like intermediates at $n=2, 3$. Only at $n=1$ do CI-NEB ($6.41 \pm 0.72$\,kcal\,mol$^{-1}$, difference of means $-0.24$\,kcal\,mol$^{-1}$) and the $\omega$B97X-D3(BJ) DFT check ($\Delta E_{\text{act,SVP}} = 4.89$\,kcal\,mol$^{-1}$, $\Delta G_{\text{act,TZ}} = 6.61$\,kcal\,mol$^{-1}$, single imaginary mode $\nu_{\text{imag}} = 210.0i$\,cm$^{-1}$) approach the direct barrier. Thus, Hypothesis~H1 is rejected for an unconstrained small base in bulk solution.
 
 \subsection{Bioinspired Levers That Rescue the Proton Relay}
 Evaluating all 660 calculations of the bioinspired screen (253 \texttt{ok}, 155 \texttt{geometry\_infeasible}, 110 \texttt{neb\_not\_converged}, 82 \texttt{product\_not\_minimum}, 35 \texttt{error}, 21 \texttt{timeout}, 4 \texttt{reactant\_not\_minimum}) confirmed that the 7-hydroxyquinoline positive control passes in water ($n=2$: $20.79$\,kcal\,mol$^{-1}$; $n=3$: $12.54$\,kcal\,mol$^{-1}$; $n=0$ unviable) and revealed how each of the three bioinspired levers shifts the relay vs.\ direct balance (Table~\ref{tab:stage1b}, Figure~\ref{fig:fig1}b).
 
-\begin{table}[htbp]
+\begin{table*}[t]
 \centering
 \caption{Selected pilot diagnostic bioinspired screening results (GFN2-xTB/ALPB median barriers $\Delta E_{\text{act}}$ across $k \ge 2$ of $N_{\text{seed}} = 3$ usable seeds, kcal\,mol$^{-1}$) across held-off bases at fixed distance $d$, bifunctional shuttles on cyclohexa-2,4-dien-1-one $\to$ phenol, the \textit{all-cis} cyclohexane-1,3,5-triol wire, and the 7-hydroxyquinoline control.}
 \label{tab:stage1b}
@@ -171,7 +176,7 @@ Q & 7-Hydroxyquinoline & $\text{H}_2\text{O}$ & $(\text{H}_2\text{O})_2$ / $(\te
 \begin{flushleft}
 \footnotesize $^{\text{a}}$Direct transfer at $d \ge 5.0$\,\AA{} had $k < 2$ converged seeds out of 3 (e.g., $k=1$ converged at $108.32$\,kcal\,mol$^{-1}$ for $\text{AcO}^-$ at $d=6.0$\,\AA{} in water), so the pre-registered rule labels the pair \texttt{undetermined\_direct\_unusable} even though the relay converged across $k \ge 2$ seeds at $5.80$--$18.06$\,kcal\,mol$^{-1}$. $^{\text{b}}$Marked \texttt{undetermined} under the joint rule because only $k=1$ of 3 direct-topology triol seeds converged ($7.92$ and $16.45$\,kcal\,mol$^{-1}$).
 \end{flushleft}
-\end{table}
+\end{table*}
 
 \paragraph{Lever 1: Distance crossover when the base is held off the carbon acid.}
 At $d(\text{C3}\cdots\text{base}) = 4.0$\,\AA{}, direct transfer remains accessible ($9.17$--$57.56$\,kcal\,mol$^{-1}$) while an intercalated water molecule is sterically compressed. At $d = 5.0$\,\AA{}, a sharp crossover occurs: direct proton transfer without a bridge must cross a $>2.8$\,\AA{} gap, driving the direct barrier to $89.11$\,kcal\,mol$^{-1}$ ($\text{NMe}_3$, MeOH) and $89.83$\,kcal\,mol$^{-1}$ (NMI, water), whereas a single bridging water or methanol molecule ($n=1$) relays the proton with barriers of $13.23$ and $15.95$\,kcal\,mol$^{-1}$ (both formal \textbf{HITs}). At $d = 6.0$ and $7.0$\,\AA{}, the NMI direct barrier rises to $106.07$ and $111.64$\,kcal\,mol$^{-1}$, while $n=1$ and $n=2$ relays drop to $\mathbf{9.74}$ and $\mathbf{8.30}$\,kcal\,mol$^{-1}$ ($\Delta\Delta E_{\text{act}} = -96.33$ and $-103.34$\,kcal\,mol$^{-1}$). In water with $\text{NMe}_3$, the relay barrier remains flat at $6.22$\,kcal\,mol$^{-1}$ ($d=5.0$\,\AA{}, $n=1$) and $5.80$\,kcal\,mol$^{-1}$ ($d=7.0$\,\AA{}, $n=2$).
@@ -182,7 +187,7 @@ In the aromatising keto$\to$enol tautomerisation of cyclohexa-2,4-dien-1-one to 
 \subsection{Non-Peptide Synthetic Systems with Bulky Bases and Metal Complexes}
 To achieve the held-off relay regime in a non-peptide synthetic system \textbf{without any artificial distance restraints}, we evaluated 72 unconstrained 1D relaxed scans across bulky bases (DTBMP, TMP), amidine and guanidine organocatalysts (DBU, TBD), and tetrahedral Lewis-acid metal-diketone complexes ($[\text{MgCl}_2(\text{acac})]$ and $[\text{ZnCl}_2(\text{acac})]$) (Table~\ref{tab:stage1c}, Figure~\ref{fig:fig3}).
 
-\begin{table}[htbp]
+\begin{table*}[t]
 \centering
 \caption{Pilot diagnostic unconstrained non-peptide proton-transfer barriers ($\Delta E_{\text{act}}$, kcal\,mol$^{-1}$, mean $\pm$ SD, median, and paired difference $\Delta\Delta E_{\text{act}}$ across $N_{\text{seed}} = 3$ seeds in GFN2-xTB/ALPB(water)), donor--acceptor distances $R_{\text{DA}}(\text{C3}\cdots\text{N})$ (\AA{}) in the relaxed reactant ($\text{R}$) and transition state ($\text{TS}$), and unconstrained product reaction energies ($\Delta E_{\text{rxn}}$, kcal\,mol$^{-1}$).}
 \label{tab:stage1c}
@@ -207,7 +212,7 @@ Guanidine & $\text{acac} + \text{TBD}$ (guanidine) & Stepwise & $2.47 \pm 0.44$ 
 Metal chelate & $[\text{MgCl}_2(\text{acac})] + \text{NMI}$ & Direct ($n=1$) & $0.49 \pm 0.28$ & $0.45$ & $2.78 \to 2.70$ & $-7.60$ & Small base contacts \\
 Metal chelate & $[\text{MgCl}_2(\text{acac})] + \text{NMI}$ & Relay ($n=1$) & $2.06 \pm 0.17$ & $2.09$ & $4.34 \to 4.31$ & $-17.39$ & Paired $\Delta = +1.57 \pm 0.42$ \\
 Metal chelate & $[\text{ZnCl}_2(\text{acac})] + \text{NMI}$ & Direct ($n=1$) & $1.95$ ($k=1$)$^{\text{a}}$ & $1.95$ & $2.96 \to 2.67$ & $-5.33$ & Two seeds barrierless \\
-Metal chelate & $[\text{ZnCl}_2(\text{acac})] + \text{NMI}$ & Relay ($n=1$) & $\mathbf{1.27 \pm 0.24}$ & $\mathbf{1.23}$ & $4.57 \to 4.45$ & $-24.13$ & Paired $\Delta = -0.90$ ($s_1$) \\
+Metal chelate & $[\text{ZnCl}_2(\text{acac})] + \text{NMI}$ & Relay ($n=1$) & $\mathbf{1.27 \pm 0.24}$ & $\mathbf{1.23}$ & $4.57 \to 4.45$ & $-24.13$ & Paired $\Delta = -0.90$ (Seed~1) \\
 Metal chelate & $[\text{MgCl}_2(\text{acac})] + \text{DTBMP}$ & Direct ($n=1$) & $10.93 \pm 5.11$ & $10.58$ & $4.45 \to 3.08$ & $-12.06$ & Reference (steric clash) \\
 Metal chelate & $[\text{MgCl}_2(\text{acac})] + \text{DTBMP}$ & Relay ($n=1$) & $\mathbf{5.87 \pm 3.33}$ & $\mathbf{4.39}$ & $5.58 \to 5.01$ & $-19.82$ & \textbf{Relay lower} ($\Delta_{\text{med}} = -6.19$) \\
 Metal chelate & $[\text{ZnCl}_2(\text{acac})] + \text{DTBMP}$ & Direct ($n=1$) & $5.70 \pm 2.52$ & $6.29$ & $4.51 \to 3.16$ & $-18.88$ & Reference (steric clash) \\
@@ -217,14 +222,14 @@ Metal chelate & $[\text{ZnCl}_2(\text{acac})] + \text{DTBMP}$ & Relay ($n=1$) & 
 \begin{flushleft}
 \footnotesize $^{\text{a}}$For $[\text{ZnCl}_2(\text{acac})] + \text{NMI}$ direct, two of three seeds transferred the proton barrierlessly during reactant relaxation (\texttt{reactant\_not\_minimum}).
 \end{flushleft}
-\end{table}
+\end{table*}
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig3_nonpeptide_complexes.pdf}
-\caption{(a) Unconstrained activation barriers ($\Delta E_{\text{act}}$, mean $\pm$ SD across $N_{\text{seed}} = 3$ seeds in GFN2-xTB/ALPB(water)) comparing composition-matched direct ($n=1$ spectator water) and 1-water relay pathways across unencumbered amidine DBU, hindered piperidine TMP, bulky pyridine DTBMP, and Lewis-acid metal-chelated complexes $[\text{MgCl}_2(\text{acac})] + \text{DTBMP}$ and $[\text{ZnCl}_2(\text{acac})] + \text{DTBMP}$. (b) Relaxed 15-point 1D proton-transfer energy profiles showing how combining $M\text{Cl}_2$ chelation with bulky DTBMP lowers the 1-water relay barrier from $12.22$--$15.35$\,kcal\,mol$^{-1}$ (free acac) to $3.54$\,kcal\,mol$^{-1}$ ($\text{MgCl}_2$, seed $s_2$) and $1.79$\,kcal\,mol$^{-1}$ ($\text{ZnCl}_2$, seed $s_2$), lowering the barrier relative to direct transfer without artificial distance constraints.}
+\caption{(a) Unconstrained activation barriers ($\Delta E_{\text{act}}$, mean $\pm$ SD across $N_{\text{seed}} = 3$ seeds in GFN2-xTB/ALPB(water)) comparing composition-matched direct ($n=1$ spectator water) and 1-water relay pathways across unencumbered amidine DBU, hindered piperidine TMP, bulky pyridine DTBMP, and Lewis-acid metal-chelated complexes $[\text{MgCl}_2(\text{acac})] + \text{DTBMP}$ and $[\text{ZnCl}_2(\text{acac})] + \text{DTBMP}$. (b) Relaxed 15-point 1D proton-transfer energy profiles showing how combining $M\text{Cl}_2$ chelation with bulky DTBMP lowers the 1-water relay barrier from $12.22$--$15.35$\,kcal\,mol$^{-1}$ (free acac) to $3.54$\,kcal\,mol$^{-1}$ ($\text{MgCl}_2$, representative seed) and $1.79$\,kcal\,mol$^{-1}$ ($\text{ZnCl}_2$, representative seed), lowering the barrier relative to direct transfer without artificial distance constraints.}
 \label{fig:fig3}
-\end{figure}
+\end{figure*}
 
 Three design principles emerge from the unconstrained non-peptide systems (Table~\ref{tab:stage1c}, Figure~\ref{fig:fig3}):
 \begin{enumerate}
@@ -237,17 +242,17 @@ Chelating acetylacetone to $\text{MgCl}_2$ or $\text{ZnCl}_2$ both acidifies the
 \end{enumerate}
 
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{fig5_paired_forest.pdf}
+\includegraphics[width=0.82\textwidth]{fig5_paired_forest.pdf}
 \caption{Seed-paired barrier differences $\Delta\Delta E_{\text{act}}$ (relay minus reference, GFN2-xTB/ALPB(water)) for each composition-matched comparison. Large markers show the mean $\pm$ SD over $N_{\text{seed}} = 3$ seeds and black dots show individual seeds. Values left of zero favour the relay. Unhindered bases (DBU, TMP) favour direct transfer, whereas the metal-complex and DTBMP comparisons lean toward the relay but their intervals include zero. The TcmN comparisons use the crystallographic O27 wire against direct C10 transfer.}
 \label{fig:fig5}
-\end{figure}
+\end{figure*}
 
 \subsection{Proton Hopping in the TcmN ARO/CYC Enzyme Pocket (\texttt{3TVQ})}
 To test whether an authentic polyketide cyclase active site realises these same geometric and electrostatic principles, we analysed the 241-atom QM cluster of TcmN ARO/CYC bound to \texttt{DQH} (PDB \texttt{3TVQ}, $1.67$\,\AA{} resolution). Constrained reactant relaxation with ASE \texttt{FixAtoms} on the 24 terminal $\text{C}_\alpha$ and H-cap atoms converged in 145 BFGS steps (\texttt{58.2}\,s wall, \texttt{fmax = 0.0479}\,eV\,\AA$^{-1}$) with \textbf{zero boundary drift} ($0.000000$\,\AA{} on all 24 fixed atoms; all-atom RMSD $= 0.445$\,\AA{} from crystal coordinates) and a HOMO--LUMO gap of $0.828$\,eV in ALPB(water).
 
-\begin{table}[htbp]
+\begin{table*}[t]
 \centering
 \caption{Relaxed 1D proton-transfer scan barriers ($\Delta E_{\text{act}}$, kcal\,mol$^{-1}$) and unconstrained product reaction energies ($\Delta E_{\text{rxn}}$, kcal\,mol$^{-1}$) in the 241--244-atom TcmN ARO/CYC enzyme-pocket QM cluster (PDB \texttt{3TVQ}, GFN2-xTB/ALPB(water), 24 $\text{C}_\alpha$ and cap atoms frozen) across three independent H-bond orientation seeds and two $\text{His124}$ protonation states (neutral $\text{HIE}^0$ vs.\ cationic $\text{HIP}^+$).}
 \label{tab:pocket}
@@ -266,19 +271,19 @@ C10 Relay & $\text{DQH:C10--H24} \to \text{W999} \to \text{Asp57:OD2}$ & $27.96$
 \begin{flushleft}
 \footnotesize $^{\text{a}}$With cationic $\text{His124}^+$ (\texttt{HIP}, total cluster charge $+1$), the 1-water relay reaction energy is $\Delta E_{\text{rxn}} = -4.46$\,kcal\,mol$^{-1}$ and the 3-seed neutral median is $8.49$\,kcal\,mol$^{-1}$.
 \end{flushleft}
-\end{table}
+\end{table*}
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig2_tcmn_pocket_profiles.pdf}
 \caption{(a) Relaxed 15-point 1D proton-transfer energy profiles ($\Delta E - \Delta E_{\text{R,min}}$, GFN2-xTB/ALPB(water), representative seed) in the 241--244-atom TcmN ARO/CYC active-site QM cluster (PDB \texttt{3TVQ}) across the four studied pathways. (b) Barrier comparison across three independent hydrogen-bond orientation seeds (mean $\pm$ SD with individual seed points overlaid) and the cationic $\text{His124}^+$ (\texttt{HIP}) protonation state.}
 \label{fig:fig2}
-\end{figure}
+\end{figure*}
 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{fig6_tcmn_active_site.pdf}
+\includegraphics[width=\columnwidth]{fig6_tcmn_active_site.pdf}
 \caption{Best-fit two-dimensional projection of the relaxed TcmN active-site cluster (PDB \texttt{3TVQ}, representative seed). Atoms drawn: ligand DQH (grey, faint bonds), the Asp57 carboxylate, the His128 imidazole, and waters HOH259, HOH266, and HOH234. Dotted green lines mark the donor--acceptor distances listed in the inset, and dashed purple lines mark hydrogen bonds. The projection compresses three-dimensional geometry, so apparent proximity in the plane is not a distance.}
 \label{fig:fig6}
 \end{figure}

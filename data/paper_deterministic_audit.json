@@ -183,9 +183,9 @@
       "detail": "15 words"
     },
     {
-      "check": "Abstract within standard chemical journal limit (<= 450 words)",
+      "check": "Abstract within standard chemical journal limit (<= 350 words)",
       "passed": true,
-      "detail": "355 words"
+      "detail": "300 words"
     }
   ]
 }

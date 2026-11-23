@@ -117,7 +117,7 @@ record("Title concise (<= 16 words)", title_words <= 16, f"{title_words} words")
 
 abs_m = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", tex_str, re.S)
 abs_words = len(abs_m.group(1).split()) if abs_m else 999
-record("Abstract within standard chemical journal limit (<= 450 words)", abs_words <= 450, f"{abs_words} words")
+record("Abstract within standard chemical journal limit (<= 350 words)", abs_words <= 350, f"{abs_words} words")
 
 out_json = ROOT / "data/paper_deterministic_audit.json"
 json.dump({"n_checks": len(checks), "n_passed": sum(c["passed"] for c in checks), "checks": checks}, open(out_json, "w"), indent=2)

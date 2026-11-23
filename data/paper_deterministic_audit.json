@@ -1,0 +1,121 @@
+{
+  "n_checks": 23,
+  "n_passed": 23,
+  "checks": [
+    {
+      "check": "Stage-1b Family A hit count == 4",
+      "passed": true,
+      "detail": "found 4 hits"
+    },
+    {
+      "check": "Stage-1b HIT nme3/methanol/d=5.0 in main.tex",
+      "passed": true,
+      "detail": "relay=13.23, direct=89.11"
+    },
+    {
+      "check": "Stage-1b HIT nmi/water/d=5.0 in main.tex",
+      "passed": true,
+      "detail": "relay=15.95, direct=89.83"
+    },
+    {
+      "check": "Stage-1b HIT nmi/methanol/d=6.0 in main.tex",
+      "passed": true,
+      "detail": "relay=9.74, direct=106.07"
+    },
+    {
+      "check": "Stage-1b HIT nmi/methanol/d=7.0 in main.tex",
+      "passed": true,
+      "detail": "relay=8.30, direct=111.64"
+    },
+    {
+      "check": "Stage-1b Family B dienone/pyr/water (1.00) in main.tex",
+      "passed": true,
+      "detail": "json=1.00"
+    },
+    {
+      "check": "Stage-1b Family B dienone/acoh/water (4.44) in main.tex",
+      "passed": true,
+      "detail": "json=4.44"
+    },
+    {
+      "check": "Stage-1b Family B dienone/w1/water (18.69) in main.tex",
+      "passed": true,
+      "detail": "json=18.69"
+    },
+    {
+      "check": "Stage-1b Family B dienone/none/water (46.73) in main.tex",
+      "passed": true,
+      "detail": "json=46.73"
+    },
+    {
+      "check": "Stage-1b Family C triol/nme3/methanol (12.45) in main.tex",
+      "passed": true,
+      "detail": "json=12.45"
+    },
+    {
+      "check": "Stage-1b Family C triol/acetate/methanol (10.52) in main.tex",
+      "passed": true,
+      "detail": "json=10.52"
+    },
+    {
+      "check": "3TVQ direct_C10_Asp57 s7 (35.98) & HIP124 (33.66) in main.tex",
+      "passed": true,
+      "detail": "json s7=35.98, hip=33.66"
+    },
+    {
+      "check": "3TVQ relay_O27_W259_W266_His128 s7 (14.56) & HIP124 (7.08) in main.tex",
+      "passed": true,
+      "detail": "json s7=14.56, hip=7.08"
+    },
+    {
+      "check": "3TVQ relay_O27_W266_His128 s7 (7.01) & HIP124 (6.74) in main.tex",
+      "passed": true,
+      "detail": "json s7=7.01, hip=6.74"
+    },
+    {
+      "check": "3TVQ C10 water relay (27.96) in main.tex",
+      "passed": true,
+      "detail": "json=27.96"
+    },
+    {
+      "check": "DFT dG_dagger_tz (6.61) in main.tex",
+      "passed": true,
+      "detail": "json=6.61"
+    },
+    {
+      "check": "All \\cite keys defined in \\bibitem",
+      "passed": true,
+      "detail": "cited=52, missing=[]"
+    },
+    {
+      "check": "All \\bibitem keys cited in text",
+      "passed": true,
+      "detail": "bibitems=52, uncited=[]"
+    },
+    {
+      "check": "Every bibliography entry has a DOI or URN",
+      "passed": true,
+      "detail": "52 entries checked, missing=[]"
+    },
+    {
+      "check": "Zero banned AI-slop words",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "check": "Zero internal paths/hostnames/secrets in manuscript",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "check": "Title concise (<= 20 words)",
+      "passed": true,
+      "detail": "13 words"
+    },
+    {
+      "check": "Abstract within standard chemical journal limit (<= 400 words)",
+      "passed": true,
+      "detail": "392 words"
+    }
+  ]
+}

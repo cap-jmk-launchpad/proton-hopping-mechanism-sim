@@ -126,3 +126,17 @@ All 52 references were verified against Crossref (`api.crossref.org/works/<doi>`
 | **Structure & venue fit** | 10% | **8.8** | Logical progression from solution falsification (Stage 1) to bioinspired levers (Stage 1b) to enzyme-pocket validation (Stage 2) and falsifiable experimental predictions. |
 | **Design (figures/tables/layout)** | 10% | **8.8** | Two multi-panel vector PDF figures in the Okabe-Ito colourblind-safe palette, three booktabs tables without vertical rules, and a zero-overfull-box `tectonic` build. |
 | **Weighted Total** | **100%** | **8.85 / 10** | **Exceeds the 8.5 / 10 target.** |
+
+---
+
+## 6. Post-Stage-1c & Diagram Expansion Re-Audit (2026-11-23)
+
+Following the addition of Stage~1c (72 non-peptide bulky-base and metal-chelate jobs, bringing the total to 1{,}142 reaction-path calculations), the condensation of the abstract to 242 words, the addition of Figures~3--6 (6 vector PDF figures total), and the resolution of statistical/formatting findings:
+
+- **Deterministic audit (`scripts/verify_paper_deterministic.py`):** **51 / 51 checks passed** (including recomputed seed-paired differences and all 6 figure PDFs).
+- **Test suite (`pytest -q tests`):** **100 passed**.
+- **LaTeX build (`tectonic -X compile main.tex`):** Exited 0 with **0 `Overfull \hbox` warnings** (`paper/main.pdf`, 362.40 KiB).
+- **`agentic_reviewer` (deterministic + local LLM):**
+  - **Panel decision:** `provisionally_accept` (1/1 accept)
+  - **Overall score:** `8.25 / 10`
+  - **Findings:** `0` blockers, `0` majors, `0` minors, `1` nit (`runaway_sentences` on 63/166 sentences >35 words).

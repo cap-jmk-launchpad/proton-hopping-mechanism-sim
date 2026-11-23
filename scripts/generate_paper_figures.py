@@ -4,6 +4,10 @@
                                   (b) Stage-1b Family A distance crossover d(C3...base) = 4..7 A.
   - fig2_tcmn_pocket_profiles.pdf: (a) 3TVQ TcmN enzyme-pocket 1D relaxed scan profiles (dE vs normalized q/q_max);
                                    (b) Multi-seed (s7, s11, s13) and His124+ (HIP) barrier comparison across pocket channels.
+  - fig3_nonpeptide_complexes.pdf: (a) Stage-1c unconstrained bulky bases (DBU, TMP, DTBMP) vs Lewis-acid metal complexes
+                                   [MgCl2(acac)] and [ZnCl2(acac)] with DTBMP (direct vs 1-water relay);
+                                   (b) Reactant-to-TS donor-acceptor distance R_DA(C3...N) showing why [MCl2(acac)] + DTBMP
+                                   naturally favours the water relay at R_DA = 4.9-5.0 A without artificial restraints.
 Uses colourblind-safe Okabe-Ito palette, >=8 pt fonts, vector PDF output.
 """
 import json
@@ -26,7 +30,6 @@ plt.rcParams.update({
     "pdf.fonttype": 42,
 })
 
-# Okabe-Ito colourblind-safe palette
 C_BLUE = "#0072B2"
 C_ORANGE = "#D55E00"
 C_GREEN = "#009E73"
@@ -41,7 +44,6 @@ OUT.mkdir(parents=True, exist_ok=True)
 # ---------------- FIGURE 1: Solution (Stage 1) vs Held-off Base (Stage 1b Family A) ----------------
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 3.0), dpi=300)
 
-# Panel A: Stage-1 NMe3 + (H2O)_n unconstrained solution barriers
 ns = np.array([0, 1, 2, 3])
 dir_m1 = np.array([7.87, 6.78, 5.62, 4.25])
 dir_sd = np.array([0.03, 0.03, 0.06, 0.16])
@@ -64,7 +66,6 @@ ax1.set_ylim(0, 22)
 ax1.grid(axis="y", ls=":", alpha=0.5)
 ax1.legend(loc="upper left", frameon=False)
 
-# Panel B: Stage-1b Family A held-off base distance crossover
 d_nmi_meoh = np.array([4.0, 6.0, 7.0])
 dir_nmi_meoh = np.array([57.563, 106.067, 111.645])
 d_nmi_rel = np.array([5.0, 6.0, 7.0])
@@ -101,7 +102,6 @@ plt.close(fig)
 B = Path("/mnt/homelab-external/proton-hopping-pocket")
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 3.0), dpi=300)
 
-# Panel A: 1D scan energy profiles (seed s7) vs normalized progress (0 to 1)
 profiles = [
     ("xtb/scans/direct_C10_Asp57/scan.json", "Direct: C10–H24 $\\to$ Asp57", C_ORANGE, "-o"),
     ("xtb/scans/relay_C10_W999_Asp57_tethered/scan.json", "C10 Relay: C10 $\\to$ W999 $\\to$ Asp57", C_PURPLE, "-^"),
@@ -124,7 +124,6 @@ ax1.set_ylim(-2, 40)
 ax1.grid(axis="y", ls=":", alpha=0.5)
 ax1.legend(loc="upper left", frameon=False, fontsize=7.3)
 
-# Panel B: Multi-seed (s7, s11, s13) and His124+ (HIP) barrier comparison
 cats = ["Direct\nC10$\\to$Asp57", "C10 Relay\nvia W999", "2-Water Wire\nO27$\\to$His128", "1-Water Wire\nO27$\\to$His128"]
 x = np.arange(len(cats))
 w = 0.34
@@ -136,7 +135,6 @@ hip_vals = [33.66, np.nan, 7.08, 6.74]
 ax2.bar(x - w/2, neutral_means, width=w, yerr=neutral_sds, capsize=3, color=C_BLUE, alpha=0.88, label="Neutral $\\mathrm{His124}^0$ (3-seed mean $\\pm$ SD)")
 ax2.bar(x + w/2, [v if not np.isnan(v) else 0 for v in hip_vals], width=w, color=C_GREEN, alpha=0.88, label="Cationic $\\mathrm{His124}^+$ (HIP)")
 
-# Overlay individual seed dots
 seed_data = [
     [35.98, 34.36, 36.46],
     [27.96],
@@ -158,4 +156,55 @@ ax2.legend(loc="upper right", frameon=False, fontsize=7.5)
 fig.tight_layout()
 fig.savefig(OUT / "fig2_tcmn_pocket_profiles.pdf", bbox_inches="tight")
 plt.close(fig)
-print("Generated fig1_solution_vs_heldoff.pdf and fig2_tcmn_pocket_profiles.pdf")
+
+# ---------------- FIGURE 3: Stage-1c Non-Peptide Bulky Bases & Metal-Chelated Complexes ----------------
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 3.0), dpi=300)
+
+systems = ["DBU\n(amidine)", "TMP\n(piperidine)", "DTBMP\n(2,6-$t\\mathrm{Bu}_2$Py)", "$[\\mathrm{MgCl}_2(\\mathrm{acac})]$\n+ DTBMP", "$[\\mathrm{ZnCl}_2(\\mathrm{acac})]$\n+ DTBMP"]
+x = np.arange(len(systems))
+w = 0.35
+
+dir_means = [3.10, 7.00, 12.22, 10.93, 5.70]
+dir_sds   = [1.31, 2.40, 0.75,  5.11,  2.52]
+rel_means = [9.37, 12.47, 15.35, 5.87, 3.06]
+rel_sds   = [0.39, 0.74,  2.48,  3.33, 2.18]
+
+ax1.bar(x - w/2, dir_means, width=w, yerr=dir_sds, capsize=3, color=C_ORANGE, alpha=0.88, label="Direct ($n=1$ spectator $\\mathrm{H}_2\\mathrm{O}$)")
+ax1.bar(x + w/2, rel_means, width=w, yerr=rel_sds, capsize=3, color=C_BLUE, alpha=0.88, label="1-Water Relay ($\\mathrm{C3-H}\\to\\mathrm{H}_2\\mathrm{O}\\to\\mathrm{base}$)")
+
+ax1.set_xticks(x)
+ax1.set_xticklabels(systems, fontsize=7.5)
+ax1.set_ylabel("Activation barrier $\\Delta E^\\ddagger$ (kcal mol$^{-1}$)")
+ax1.set_title("(a) Unconstrained non-peptide bases & $M\\mathrm{Cl}_2$ complexes", loc="left", fontweight="bold")
+ax1.set_ylim(0, 20)
+ax1.grid(axis="y", ls=":", alpha=0.5)
+ax1.legend(loc="upper right", frameon=False, fontsize=7.5)
+
+# Panel B: 1D scan profiles comparing [MgCl2(acac)]+DTBMP and [ZnCl2(acac)]+DTBMP direct vs relay (seed s2)
+C1C = Path("/mnt/homelab-external/proton-hopping-stage1b/runs/stage1c-nonpeptide")
+p_list = [
+    ("E1_dtbmp_n1_direct_s1/result.json", "Free acac + DTBMP (Direct, $12.22$)", C_GREY, "--o"),
+    ("E3_MgCl2_dtbmp_n1_direct_s2/result.json", "$[\\mathrm{MgCl}_2(\\mathrm{acac})]$ + DTBMP (Direct, $10.58$)", C_ORANGE, "--s"),
+    ("E3_MgCl2_dtbmp_n1_relay_s2/result.json", "$[\\mathrm{MgCl}_2(\\mathrm{acac})]$ + DTBMP (Relay, $3.54$)", C_BLUE, "-s"),
+    ("E3_ZnCl2_dtbmp_n1_relay_s2/result.json", "$[\\mathrm{ZnCl}_2(\\mathrm{acac})]$ + DTBMP (Relay, $1.79$)", C_GREEN, "-D"),
+]
+for rel_p, lab, col, fmt in p_list:
+    r = json.load(open(C1C / rel_p))
+    pts = r["points"]
+    emin = min(p["dE_kcal"] for p in pts[:4])
+    xs = np.linspace(0, 1, len(pts))
+    ys = np.array([p["dE_kcal"] - emin for p in pts])
+    ax2.plot(xs, ys, fmt, color=col, lw=1.7, ms=4.2, label=lab)
+
+ax2.set_xlabel("Normalized proton-transfer coordinate $\\xi$")
+ax2.set_ylabel("$\\Delta E - \\Delta E_{\\mathrm{R,min}}$ (kcal mol$^{-1}$)")
+ax2.set_title("(b) Metal-chelated + bulky-base relay rescue", loc="left", fontweight="bold")
+ax2.set_ylim(-26, 16)
+ax2.axhline(0, color="black", lw=0.6, ls=":")
+ax2.grid(axis="y", ls=":", alpha=0.5)
+ax2.legend(loc="lower left", frameon=False, fontsize=7.0)
+
+fig.tight_layout()
+fig.savefig(OUT / "fig3_nonpeptide_complexes.pdf", bbox_inches="tight")
+plt.close(fig)
+print("Generated fig1, fig2, and fig3 PDFs.")

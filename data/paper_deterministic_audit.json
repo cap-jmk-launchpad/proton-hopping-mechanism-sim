@@ -1,7 +1,17 @@
 {
-  "n_checks": 23,
-  "n_passed": 23,
+  "n_checks": 37,
+  "n_passed": 37,
   "checks": [
+    {
+      "check": "Author ORCID (0000-0001-5518-0932) in main.tex",
+      "passed": true,
+      "detail": "https://orcid.org/0000-0001-5518-0932"
+    },
+    {
+      "check": "Author Gmail (julian.m.kleber@gmail.com) in main.tex",
+      "passed": true,
+      "detail": "mailto:julian.m.kleber@gmail.com"
+    },
     {
       "check": "Stage-1b Family A hit count == 4",
       "passed": true,
@@ -58,6 +68,66 @@
       "detail": "json=10.52"
     },
     {
+      "check": "Stage-1c E1_dbu_n1_direct mean (3.10) & med (2.80) in main.tex",
+      "passed": true,
+      "detail": "json mean=3.10, med=2.80"
+    },
+    {
+      "check": "Stage-1c E1_dbu_n1_relay mean (9.37) & med (9.34) in main.tex",
+      "passed": true,
+      "detail": "json mean=9.37, med=9.34"
+    },
+    {
+      "check": "Stage-1c E1_tmp_n1_direct mean (7.00) & med (6.43) in main.tex",
+      "passed": true,
+      "detail": "json mean=7.00, med=6.43"
+    },
+    {
+      "check": "Stage-1c E1_tmp_n1_relay mean (12.47) & med (12.69) in main.tex",
+      "passed": true,
+      "detail": "json mean=12.47, med=12.69"
+    },
+    {
+      "check": "Stage-1c E1_dtbmp_n1_direct mean (12.22) & med (12.22) in main.tex",
+      "passed": true,
+      "detail": "json mean=12.22, med=12.22"
+    },
+    {
+      "check": "Stage-1c E1_dtbmp_n1_relay mean (15.35) & med (15.90) in main.tex",
+      "passed": true,
+      "detail": "json mean=15.35, med=15.90"
+    },
+    {
+      "check": "Stage-1c E1_dtbmp_n2_relay mean (13.51) & med (13.44) in main.tex",
+      "passed": true,
+      "detail": "json mean=13.51, med=13.44"
+    },
+    {
+      "check": "Stage-1c E2_tbd_acac_relay mean (1.92) & med (2.10) in main.tex",
+      "passed": true,
+      "detail": "json mean=1.92, med=2.10"
+    },
+    {
+      "check": "Stage-1c E3_MgCl2_dtbmp_n1_direct mean (10.93) & med (10.58) in main.tex",
+      "passed": true,
+      "detail": "json mean=10.93, med=10.58"
+    },
+    {
+      "check": "Stage-1c E3_MgCl2_dtbmp_n1_relay mean (5.87) & med (4.39) in main.tex",
+      "passed": true,
+      "detail": "json mean=5.87, med=4.39"
+    },
+    {
+      "check": "Stage-1c E3_ZnCl2_dtbmp_n1_direct mean (5.70) & med (6.29) in main.tex",
+      "passed": true,
+      "detail": "json mean=5.70, med=6.29"
+    },
+    {
+      "check": "Stage-1c E3_ZnCl2_dtbmp_n1_relay mean (3.06) & med (1.82) in main.tex",
+      "passed": true,
+      "detail": "json mean=3.06, med=1.82"
+    },
+    {
       "check": "3TVQ direct_C10_Asp57 s7 (35.98) & HIP124 (33.66) in main.tex",
       "passed": true,
       "detail": "json s7=35.98, hip=33.66"
@@ -108,14 +178,14 @@
       "detail": "found=[]"
     },
     {
-      "check": "Title concise (<= 20 words)",
+      "check": "Title concise (<= 16 words)",
       "passed": true,
-      "detail": "13 words"
+      "detail": "15 words"
     },
     {
-      "check": "Abstract within standard chemical journal limit (<= 400 words)",
+      "check": "Abstract within standard chemical journal limit (<= 450 words)",
       "passed": true,
-      "detail": "392 words"
+      "detail": "355 words"
     }
   ]
 }

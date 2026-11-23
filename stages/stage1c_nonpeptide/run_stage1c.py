@@ -17,34 +17,27 @@ Families tested (3 seeds s0, s1, s2 each):
       - Outer-sphere water relay: M2+-chelated acac C3-H -> H2O -> base (with 2 M-coordinated aqua ligands)
       - Inner-sphere aqua-ligand relay: M2+-chelated acac C3-H -> base while M-OH2 donates H+ to acac C=O or base
 """
-import json, sys, time
+import json, os, sys, time
 from pathlib import Path
 import numpy as np
 from rdkit import Chem
 from rdkit.Chem import AllChem
-from ase import Atoms
-from ase.io import write
-from ase.constraints import FixInternals
-from ase.optimize import BFGS
-from tblite.ase import TBLite
 
-sys.path.insert(0, "/tmp/proton-hopping-git/stages/stage1_model_relays")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "stage1_model_relays"))
 from build import _unit, _rot, _axis_rot, lone_pair_dirs  # noqa
 
-OUT = Path("/mnt/homelab-external/proton-hopping-stage1b/runs/stage1c-nonpeptide")
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = Path(os.environ.get("STAGE1C_OUT", "/tmp/stage1c-nonpeptide"))
 
 SMILES = {
     "acac": "CC(=O)[CH2:1]C(C)=[O:2]",
     "dienone": "[O:2]=C1[CH2:1]C=CC=C1",
     "water": "[OH2:1]",
     "nmi": "CN1C=C[N:1]=C1",
-    "dtbmp": "CC(C)(C)c1cc(C)cc([c:2]1)[n:1]0".replace("[n:1]0", ""),  # wait, let's use exact SMILES below
+    "dtbmp": "CC(C)(C)c1cc(C)cc(C(C)(C)C)[n:1]1",
+    "tmp": "CC1(C)CCCC(C)(C)[NH:1]1",
+    "dbu": "C1CCC2=[N:1]CCCN2CC1",
+    "tbd": "C1CN2CCC[N:1]=C2[NH:2]1",
 }
-SMILES["dtbmp"] = "CC(C)(C)c1cc(C)cc(C(C)(C)C)[n:1]1"
-SMILES["tmp"] = "CC1(C)CCCC(C)(C)[NH:1]1"
-SMILES["dbu"] = "C1CCC2=[N:1]CCCN2CC1"
-SMILES["tbd"] = "C1CN2CCC[N:1]=C2[NH:2]1"
 
 
 def embed_monomer(name, seed=0):
@@ -312,6 +305,11 @@ def build_metal_complex(metal_sym, base_name, topology, seed=0):
 
 
 def run_1d_scan(job_name, spec, NP=15):
+    from ase import Atoms
+    from ase.io import write
+    from ase.constraints import FixInternals
+    from ase.optimize import BFGS
+    from tblite.ase import TBLite
     jdir = OUT / job_name
     jdir.mkdir(parents=True, exist_ok=True)
     if (jdir / "result.json").exists():

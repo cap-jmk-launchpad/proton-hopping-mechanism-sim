@@ -48,6 +48,17 @@ Validate with `python scripts/validate_structures.py`.
 Success criterion: relay path lower than classical at the same level of theory and robust to functional and
 solvation choice; otherwise H1/H2 are rejected and reported. No threshold numbers are fixed until stage 1.
 
+## Stage 1b: relay-design screen (draft, not run)
+Design and pre-registered rejection rule: `docs/relay-system-design.md`. Code: `stages/stage1b_relay_design/`
+(`species.yaml` + `validate1b.py` RDKit/PubChem checks, `build1b.py` families A tethered base / B shuttle
+tautomerisation / C preorganised triol wire / D second shell / Q 7-hydroxyquinoline control, `run1b.py` xtb + CI-NEB +
+partial-Hessian KIE/tunnelling + optional CREST, `kinetics.py`, `pka_ladder.py`). Only one pilot job has been run.
+```
+python stages/stage1b_relay_design/validate1b.py                  # species checks (RDKit only)
+python stages/stage1b_relay_design/run1b.py --list                # 660 job ids, runs nothing
+pytest -q tests                                                   # no xtb needed
+```
+
 ## Layout
 ```
 scripts/smoke_proton_scan.py      stage 0

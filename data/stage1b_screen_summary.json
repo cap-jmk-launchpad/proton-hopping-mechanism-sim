@@ -1,0 +1,3628 @@
+{
+ "n_results": 660,
+ "statuses": {
+  "ok": 253,
+  "neb_not_converged": 110,
+  "product_not_minimum": 82,
+  "geometry_infeasible": 155,
+  "error": 35,
+  "timeout": 21,
+  "reactant_not_minimum": 4
+ },
+ "verdicts": {
+  "A": [
+   {
+    "base": "nme3",
+    "solvent": "water",
+    "d": 4.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": 31.991,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "nme3",
+    "solvent": "water",
+    "d": 5.0,
+    "relay_best": 6.223,
+    "relay_best_n": 1,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "nme3",
+    "solvent": "water",
+    "d": 6.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": null,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "nme3",
+    "solvent": "water",
+    "d": 7.0,
+    "relay_best": 5.803,
+    "relay_best_n": 2,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "nme3",
+    "solvent": "methanol",
+    "d": 4.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": 13.43,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "nme3",
+    "solvent": "methanol",
+    "d": 5.0,
+    "relay_best": 13.23,
+    "relay_best_n": 1,
+    "direct": 89.107,
+    "verdict": "HIT"
+   },
+   {
+    "base": "nme3",
+    "solvent": "methanol",
+    "d": 6.0,
+    "relay_best": 7.652,
+    "relay_best_n": 2,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "nme3",
+    "solvent": "methanol",
+    "d": 7.0,
+    "relay_best": 13.46,
+    "relay_best_n": 2,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "nmi",
+    "solvent": "water",
+    "d": 4.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": 56.133,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "nmi",
+    "solvent": "water",
+    "d": 5.0,
+    "relay_best": 15.95,
+    "relay_best_n": 1,
+    "direct": 89.834,
+    "verdict": "HIT"
+   },
+   {
+    "base": "nmi",
+    "solvent": "water",
+    "d": 6.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": 105.093,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "nmi",
+    "solvent": "water",
+    "d": 7.0,
+    "relay_best": 29.267,
+    "relay_best_n": 1,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "nmi",
+    "solvent": "methanol",
+    "d": 4.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": 57.563,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "nmi",
+    "solvent": "methanol",
+    "d": 5.0,
+    "relay_best": 9.576,
+    "relay_best_n": 1,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "nmi",
+    "solvent": "methanol",
+    "d": 6.0,
+    "relay_best": 9.737,
+    "relay_best_n": 1,
+    "direct": 106.067,
+    "verdict": "HIT"
+   },
+   {
+    "base": "nmi",
+    "solvent": "methanol",
+    "d": 7.0,
+    "relay_best": 8.301,
+    "relay_best_n": 2,
+    "direct": 111.645,
+    "verdict": "HIT"
+   },
+   {
+    "base": "acetate",
+    "solvent": "water",
+    "d": 4.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": 9.922,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "acetate",
+    "solvent": "water",
+    "d": 5.0,
+    "relay_best": 14.241,
+    "relay_best_n": 1,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "acetate",
+    "solvent": "water",
+    "d": 6.0,
+    "relay_best": 12.001,
+    "relay_best_n": 1,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "acetate",
+    "solvent": "water",
+    "d": 7.0,
+    "relay_best": 18.06,
+    "relay_best_n": 2,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "acetate",
+    "solvent": "methanol",
+    "d": 4.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": 9.172,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "acetate",
+    "solvent": "methanol",
+    "d": 5.0,
+    "relay_best": null,
+    "relay_best_n": null,
+    "direct": null,
+    "verdict": "no_usable_relay"
+   },
+   {
+    "base": "acetate",
+    "solvent": "methanol",
+    "d": 6.0,
+    "relay_best": 11.124,
+    "relay_best_n": 1,
+    "direct": null,
+    "verdict": "undetermined_direct_unusable"
+   },
+   {
+    "base": "acetate",
+    "solvent": "methanol",
+    "d": 7.0,
+    "relay_best": 44.363,
+    "relay_best_n": 1,
+    "direct": 83.659,
+    "verdict": "no"
+   }
+  ],
+  "B": [
+   {
+    "substrate": "acac",
+    "shuttle": "w1",
+    "solvent": "water",
+    "relay": 25.141,
+    "stepwise": null,
+    "relay_w1": 25.141,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "w1",
+    "solvent": "methanol",
+    "relay": null,
+    "stepwise": null,
+    "relay_w1": null,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "w2",
+    "solvent": "water",
+    "relay": 21.243,
+    "stepwise": 15.687,
+    "relay_w1": 25.141,
+    "intramolecular": null,
+    "verdict": "no"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "w2",
+    "solvent": "methanol",
+    "relay": 21.485,
+    "stepwise": null,
+    "relay_w1": null,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "m1",
+    "solvent": "water",
+    "relay": 31.929,
+    "stepwise": null,
+    "relay_w1": 25.141,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "m1",
+    "solvent": "methanol",
+    "relay": 33.562,
+    "stepwise": null,
+    "relay_w1": null,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "acoh",
+    "solvent": "water",
+    "relay": null,
+    "stepwise": null,
+    "relay_w1": 25.141,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "acoh",
+    "solvent": "methanol",
+    "relay": 10.996,
+    "stepwise": null,
+    "relay_w1": null,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "pyr",
+    "solvent": "water",
+    "relay": null,
+    "stepwise": null,
+    "relay_w1": 25.141,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "pyr",
+    "solvent": "methanol",
+    "relay": 16.686,
+    "stepwise": 16.098,
+    "relay_w1": null,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "phoh",
+    "solvent": "water",
+    "relay": 35.843,
+    "stepwise": null,
+    "relay_w1": 25.141,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "phoh",
+    "solvent": "methanol",
+    "relay": 18.512,
+    "stepwise": null,
+    "relay_w1": null,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "hfip",
+    "solvent": "water",
+    "relay": null,
+    "stepwise": null,
+    "relay_w1": 25.141,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "acac",
+    "shuttle": "hfip",
+    "solvent": "methanol",
+    "relay": null,
+    "stepwise": null,
+    "relay_w1": null,
+    "intramolecular": null,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "w1",
+    "solvent": "water",
+    "relay": 18.688,
+    "stepwise": null,
+    "relay_w1": 18.688,
+    "intramolecular": 46.726,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "w1",
+    "solvent": "methanol",
+    "relay": 0.216,
+    "stepwise": null,
+    "relay_w1": 0.216,
+    "intramolecular": 47.634,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "w2",
+    "solvent": "water",
+    "relay": 12.811,
+    "stepwise": null,
+    "relay_w1": 18.688,
+    "intramolecular": 46.726,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "w2",
+    "solvent": "methanol",
+    "relay": null,
+    "stepwise": null,
+    "relay_w1": 0.216,
+    "intramolecular": 47.634,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "m1",
+    "solvent": "water",
+    "relay": 0.165,
+    "stepwise": null,
+    "relay_w1": 18.688,
+    "intramolecular": 46.726,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "m1",
+    "solvent": "methanol",
+    "relay": 1.933,
+    "stepwise": null,
+    "relay_w1": 0.216,
+    "intramolecular": 47.634,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "acoh",
+    "solvent": "water",
+    "relay": 4.443,
+    "stepwise": 4.347,
+    "relay_w1": 18.688,
+    "intramolecular": 46.726,
+    "verdict": "no"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "acoh",
+    "solvent": "methanol",
+    "relay": 4.732,
+    "stepwise": 4.674,
+    "relay_w1": 0.216,
+    "intramolecular": 47.634,
+    "verdict": "no"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "pyr",
+    "solvent": "water",
+    "relay": 0.997,
+    "stepwise": 2.199,
+    "relay_w1": 18.688,
+    "intramolecular": 46.726,
+    "verdict": "no"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "pyr",
+    "solvent": "methanol",
+    "relay": 0.056,
+    "stepwise": 0.174,
+    "relay_w1": 0.216,
+    "intramolecular": 47.634,
+    "verdict": "no"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "phoh",
+    "solvent": "water",
+    "relay": 0.806,
+    "stepwise": null,
+    "relay_w1": 18.688,
+    "intramolecular": 46.726,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "phoh",
+    "solvent": "methanol",
+    "relay": 0.844,
+    "stepwise": null,
+    "relay_w1": 0.216,
+    "intramolecular": 47.634,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "hfip",
+    "solvent": "water",
+    "relay": null,
+    "stepwise": null,
+    "relay_w1": 18.688,
+    "intramolecular": 46.726,
+    "verdict": "undetermined"
+   },
+   {
+    "substrate": "dienone",
+    "shuttle": "hfip",
+    "solvent": "methanol",
+    "relay": 0.693,
+    "stepwise": null,
+    "relay_w1": 0.216,
+    "intramolecular": 47.634,
+    "verdict": "undetermined"
+   }
+  ],
+  "C": [
+   {
+    "base": "nme3",
+    "solvent": "water",
+    "relay": 16.741,
+    "direct": null,
+    "loose_w3": 14.544,
+    "verdict": "undetermined"
+   },
+   {
+    "base": "nme3",
+    "solvent": "methanol",
+    "relay": 12.45,
+    "direct": null,
+    "loose_w3": 19.677,
+    "verdict": "undetermined"
+   },
+   {
+    "base": "acetate",
+    "solvent": "water",
+    "relay": 26.303,
+    "direct": null,
+    "loose_w3": 15.612,
+    "verdict": "undetermined"
+   },
+   {
+    "base": "acetate",
+    "solvent": "methanol",
+    "relay": 10.516,
+    "direct": null,
+    "loose_w3": 18.861,
+    "verdict": "undetermined"
+   }
+  ],
+  "Q": [
+   {
+    "solvent": "water",
+    "n": 2,
+    "relay": 20.789,
+    "n0": null,
+    "passes": true
+   },
+   {
+    "solvent": "water",
+    "n": 3,
+    "relay": 12.538,
+    "n0": null,
+    "passes": true
+   },
+   {
+    "solvent": "methanol",
+    "n": 2,
+    "relay": null,
+    "n0": 78.944,
+    "passes": false
+   },
+   {
+    "solvent": "methanol",
+    "n": 3,
+    "relay": null,
+    "n0": 78.944,
+    "passes": false
+   }
+  ],
+  "Q_control_passes": true,
+  "hits": {
+   "A": 4,
+   "B": 0,
+   "C": 0
+  }
+ },
+ "conditions": {
+  "A|acetate|methanol|0|3.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 13.145,
+   "seed_barriers": [
+    8.85,
+    13.14,
+    14.58
+   ]
+  },
+  "A|acetate|methanol|0|4.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 9.172,
+   "seed_barriers": [
+    8.13,
+    9.17,
+    9.37
+   ]
+  },
+  "A|acetate|methanol|0|5.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": null,
+   "seed_barriers": [
+    6.58
+   ]
+  },
+  "A|acetate|methanol|0|6.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "neb_not_converged": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|0|7.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 83.659,
+   "seed_barriers": [
+    81.5,
+    85.82
+   ]
+  },
+  "A|acetate|methanol|0|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier": 12.605,
+   "seed_barriers": [
+    11.43,
+    13.78
+   ]
+  },
+  "A|acetate|methanol|1|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|1|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 1,
+    "product_not_minimum": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|1|5.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    16.74
+   ]
+  },
+  "A|acetate|methanol|1|6.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 11.124,
+   "seed_barriers": [
+    10.75,
+    11.5
+   ]
+  },
+  "A|acetate|methanol|1|7.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 44.363,
+   "seed_barriers": [
+    43.28,
+    45.44
+   ]
+  },
+  "A|acetate|methanol|1|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 10.437,
+   "seed_barriers": [
+    9.1,
+    10.44,
+    14.22
+   ]
+  },
+  "A|acetate|methanol|2|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|2|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|2|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|2|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "error": 1,
+    "geometry_infeasible": 1,
+    "neb_not_converged": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    8.07
+   ]
+  },
+  "A|acetate|methanol|2|7.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    6.64
+   ]
+  },
+  "A|acetate|methanol|2|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 11.365,
+   "seed_barriers": [
+    6.32,
+    11.37,
+    16.49
+   ]
+  },
+  "A|acetate|methanol|3|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|3|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|3|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|3|6.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|3|7.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|methanol|3|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 1,
+    "timeout": 1
+   },
+   "barrier": 18.861,
+   "seed_barriers": [
+    12.58,
+    25.14
+   ]
+  },
+  "A|acetate|water|0|3.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 12.11,
+   "seed_barriers": [
+    9.49,
+    12.11,
+    19.57
+   ]
+  },
+  "A|acetate|water|0|4.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 9.922,
+   "seed_barriers": [
+    9.9,
+    9.94
+   ]
+  },
+  "A|acetate|water|0|5.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": null,
+   "seed_barriers": [
+    9.85
+   ]
+  },
+  "A|acetate|water|0|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    108.32
+   ]
+  },
+  "A|acetate|water|0|7.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|0|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier": 12.498,
+   "seed_barriers": [
+    12.45,
+    12.54
+   ]
+  },
+  "A|acetate|water|1|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|1|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 1,
+    "product_not_minimum": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|1|5.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 14.241,
+   "seed_barriers": [
+    12.38,
+    14.24,
+    23.85
+   ]
+  },
+  "A|acetate|water|1|6.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 12.001,
+   "seed_barriers": [
+    11.46,
+    12.0,
+    13.14
+   ]
+  },
+  "A|acetate|water|1|7.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 34.153,
+   "seed_barriers": [
+    34.11,
+    34.15,
+    37.19
+   ]
+  },
+  "A|acetate|water|1|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 11.66,
+   "seed_barriers": [
+    9.46,
+    11.66,
+    19.13
+   ]
+  },
+  "A|acetate|water|2|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|2|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|2|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|2|6.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier": 13.002,
+   "seed_barriers": [
+    12.82,
+    13.18
+   ]
+  },
+  "A|acetate|water|2|7.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "ok": 2
+   },
+   "barrier": 18.06,
+   "seed_barriers": [
+    13.67,
+    22.45
+   ]
+  },
+  "A|acetate|water|2|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 16.619,
+   "seed_barriers": [
+    10.98,
+    16.62,
+    18.28
+   ]
+  },
+  "A|acetate|water|3|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|3|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|acetate|water|3|5.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "neb_not_converged": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    13.38
+   ]
+  },
+  "A|acetate|water|3|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    13.7
+   ]
+  },
+  "A|acetate|water|3|7.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    14.16
+   ]
+  },
+  "A|acetate|water|3|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 15.612,
+   "seed_barriers": [
+    14.12,
+    15.61,
+    23.67
+   ]
+  },
+  "A|nme3|methanol|0|3.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 1,
+    "product_not_minimum": 2
+   },
+   "barrier": null,
+   "seed_barriers": [
+    11.13
+   ]
+  },
+  "A|nme3|methanol|0|4.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 13.43,
+   "seed_barriers": [
+    13.1,
+    13.76
+   ]
+  },
+  "A|nme3|methanol|0|5.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 89.107,
+   "seed_barriers": [
+    83.82,
+    89.11,
+    89.33
+   ]
+  },
+  "A|nme3|methanol|0|6.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|0|7.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|0|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier": 9.869,
+   "seed_barriers": [
+    9.73,
+    10.01
+   ]
+  },
+  "A|nme3|methanol|1|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|1|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|1|5.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 13.23,
+   "seed_barriers": [
+    8.35,
+    13.23,
+    19.17
+   ]
+  },
+  "A|nme3|methanol|1|6.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 10.104,
+   "seed_barriers": [
+    9.77,
+    10.1,
+    11.62
+   ]
+  },
+  "A|nme3|methanol|1|7.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 22.767,
+   "seed_barriers": [
+    4.1,
+    41.43
+   ]
+  },
+  "A|nme3|methanol|1|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 12.163,
+   "seed_barriers": [
+    9.83,
+    12.16,
+    12.21
+   ]
+  },
+  "A|nme3|methanol|2|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|2|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|2|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|2|6.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "geometry_infeasible": 1,
+    "ok": 2
+   },
+   "barrier": 7.652,
+   "seed_barriers": [
+    7.56,
+    7.75
+   ]
+  },
+  "A|nme3|methanol|2|7.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 2,
+    "timeout": 1
+   },
+   "barrier": 13.46,
+   "seed_barriers": [
+    10.75,
+    16.17
+   ]
+  },
+  "A|nme3|methanol|2|None": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "neb_not_converged": 1,
+    "timeout": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|3|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|3|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|3|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|3|6.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|methanol|3|7.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    9.57
+   ]
+  },
+  "A|nme3|methanol|3|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 1,
+    "timeout": 1
+   },
+   "barrier": 19.677,
+   "seed_barriers": [
+    17.18,
+    22.17
+   ]
+  },
+  "A|nme3|water|0|3.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 1,
+    "product_not_minimum": 2
+   },
+   "barrier": null,
+   "seed_barriers": [
+    13.02
+   ]
+  },
+  "A|nme3|water|0|4.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 31.991,
+   "seed_barriers": [
+    10.47,
+    53.52
+   ]
+  },
+  "A|nme3|water|0|5.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    11.5
+   ]
+  },
+  "A|nme3|water|0|6.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|0|7.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|0|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 8.137,
+   "seed_barriers": [
+    7.76,
+    8.14,
+    9.79
+   ]
+  },
+  "A|nme3|water|1|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|1|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|1|5.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 6.223,
+   "seed_barriers": [
+    5.11,
+    7.33
+   ]
+  },
+  "A|nme3|water|1|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    27.21
+   ]
+  },
+  "A|nme3|water|1|7.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 29.273,
+   "seed_barriers": [
+    28.99,
+    29.27,
+    30.39
+   ]
+  },
+  "A|nme3|water|1|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 5.169,
+   "seed_barriers": [
+    4.32,
+    6.02
+   ]
+  },
+  "A|nme3|water|2|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|2|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|2|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|2|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 1,
+    "product_not_minimum": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    7.63
+   ]
+  },
+  "A|nme3|water|2|7.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 5.803,
+   "seed_barriers": [
+    5.28,
+    5.8,
+    18.39
+   ]
+  },
+  "A|nme3|water|2|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "ok": 2
+   },
+   "barrier": 20.599,
+   "seed_barriers": [
+    17.64,
+    23.56
+   ]
+  },
+  "A|nme3|water|3|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|3|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|3|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|3|6.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 1,
+    "geometry_infeasible": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nme3|water|3|7.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    13.42
+   ]
+  },
+  "A|nme3|water|3|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "ok": 2
+   },
+   "barrier": 14.544,
+   "seed_barriers": [
+    11.06,
+    18.03
+   ]
+  },
+  "A|nmi|methanol|0|3.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 16.544,
+   "seed_barriers": [
+    15.57,
+    16.54,
+    16.66
+   ]
+  },
+  "A|nmi|methanol|0|4.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 57.563,
+   "seed_barriers": [
+    11.11,
+    57.56,
+    60.18
+   ]
+  },
+  "A|nmi|methanol|0|5.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    89.0
+   ]
+  },
+  "A|nmi|methanol|0|6.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 106.067,
+   "seed_barriers": [
+    105.0,
+    107.14
+   ]
+  },
+  "A|nmi|methanol|0|7.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 111.645,
+   "seed_barriers": [
+    110.03,
+    111.64,
+    111.67
+   ]
+  },
+  "A|nmi|methanol|0|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 8.542,
+   "seed_barriers": [
+    8.51,
+    8.57
+   ]
+  },
+  "A|nmi|methanol|1|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|1|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|1|5.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 9.576,
+   "seed_barriers": [
+    8.61,
+    9.58,
+    12.01
+   ]
+  },
+  "A|nmi|methanol|1|6.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 9.737,
+   "seed_barriers": [
+    9.3,
+    9.74,
+    10.08
+   ]
+  },
+  "A|nmi|methanol|1|7.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 40.804,
+   "seed_barriers": [
+    40.57,
+    41.03
+   ]
+  },
+  "A|nmi|methanol|1|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 9.526,
+   "seed_barriers": [
+    9.52,
+    9.53,
+    13.62
+   ]
+  },
+  "A|nmi|methanol|2|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|2|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|2|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|2|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "geometry_infeasible": 1,
+    "ok": 1,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    9.12
+   ]
+  },
+  "A|nmi|methanol|2|7.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 3
+   },
+   "barrier": 8.301,
+   "seed_barriers": [
+    8.07,
+    8.3,
+    9.34
+   ]
+  },
+  "A|nmi|methanol|2|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 9.007,
+   "seed_barriers": [
+    8.7,
+    9.01,
+    15.16
+   ]
+  },
+  "A|nmi|methanol|3|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|3|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|3|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|3|6.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|3|7.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|methanol|3|None": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 1,
+    "timeout": 2
+   },
+   "barrier": null,
+   "seed_barriers": [
+    15.71
+   ]
+  },
+  "A|nmi|water|0|3.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 14.052,
+   "seed_barriers": [
+    6.96,
+    14.05,
+    15.28
+   ]
+  },
+  "A|nmi|water|0|4.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 56.133,
+   "seed_barriers": [
+    6.06,
+    56.13,
+    59.0
+   ]
+  },
+  "A|nmi|water|0|5.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 89.834,
+   "seed_barriers": [
+    88.61,
+    91.06
+   ]
+  },
+  "A|nmi|water|0|6.0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 105.093,
+   "seed_barriers": [
+    104.98,
+    105.2
+   ]
+  },
+  "A|nmi|water|0|7.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    110.24
+   ]
+  },
+  "A|nmi|water|0|None": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 7.065,
+   "seed_barriers": [
+    6.21,
+    7.07,
+    7.85
+   ]
+  },
+  "A|nmi|water|1|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|1|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|1|5.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 15.95,
+   "seed_barriers": [
+    5.89,
+    15.95,
+    17.94
+   ]
+  },
+  "A|nmi|water|1|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    28.36
+   ]
+  },
+  "A|nmi|water|1|7.0": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 29.267,
+   "seed_barriers": [
+    27.57,
+    29.27,
+    29.92
+   ]
+  },
+  "A|nmi|water|1|None": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 10.369,
+   "seed_barriers": [
+    5.09,
+    15.64
+   ]
+  },
+  "A|nmi|water|2|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|2|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|2|5.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|2|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "product_not_minimum": 1,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    11.71
+   ]
+  },
+  "A|nmi|water|2|7.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    15.78
+   ]
+  },
+  "A|nmi|water|2|None": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    18.08
+   ]
+  },
+  "A|nmi|water|3|3.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|3|4.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "geometry_infeasible": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|3|5.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    11.43
+   ]
+  },
+  "A|nmi|water|3|6.0": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "geometry_infeasible": 2,
+    "neb_not_converged": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    16.0
+   ]
+  },
+  "A|nmi|water|3|7.0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 1,
+    "geometry_infeasible": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "A|nmi|water|3|None": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    17.71
+   ]
+  },
+  "B|acac|acoh|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 10.996,
+   "seed_barriers": [
+    10.46,
+    11.54
+   ]
+  },
+  "B|acac|acoh|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 1,
+    "product_not_minimum": 2
+   },
+   "barrier": null,
+   "seed_barriers": [
+    8.28
+   ]
+  },
+  "B|acac|acoh|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "neb_not_converged": 2,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|acoh|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    8.61
+   ]
+  },
+  "B|acac|hfip|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    14.9
+   ]
+  },
+  "B|acac|hfip|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|hfip|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "neb_not_converged": 2,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|hfip|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|m1|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 33.562,
+   "seed_barriers": [
+    33.48,
+    33.56,
+    33.86
+   ]
+  },
+  "B|acac|m1|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|m1|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 31.929,
+   "seed_barriers": [
+    31.92,
+    31.93,
+    32.31
+   ]
+  },
+  "B|acac|m1|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|none|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 1,
+    "product_not_minimum": 2
+   },
+   "barrier": null,
+   "seed_barriers": [
+    9.38
+   ]
+  },
+  "B|acac|none|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "neb_not_converged": 1,
+    "product_not_minimum": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|phoh|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 18.512,
+   "seed_barriers": [
+    6.99,
+    30.04
+   ]
+  },
+  "B|acac|phoh|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|phoh|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 35.843,
+   "seed_barriers": [
+    29.62,
+    42.06
+   ]
+  },
+  "B|acac|phoh|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|pyr|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 16.686,
+   "seed_barriers": [
+    14.67,
+    16.69,
+    17.41
+   ]
+  },
+  "B|acac|pyr|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 16.098,
+   "seed_barriers": [
+    15.38,
+    16.1,
+    16.95
+   ]
+  },
+  "B|acac|pyr|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    15.92
+   ]
+  },
+  "B|acac|pyr|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": null,
+   "seed_barriers": [
+    15.45
+   ]
+  },
+  "B|acac|w1|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    30.17
+   ]
+  },
+  "B|acac|w1|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|w1|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 25.141,
+   "seed_barriers": [
+    22.93,
+    27.36
+   ]
+  },
+  "B|acac|w1|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|w2|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 21.485,
+   "seed_barriers": [
+    15.61,
+    27.36
+   ]
+  },
+  "B|acac|w2|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|acac|w2|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 21.243,
+   "seed_barriers": [
+    20.41,
+    21.24,
+    21.97
+   ]
+  },
+  "B|acac|w2|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier": 15.687,
+   "seed_barriers": [
+    9.63,
+    21.75
+   ]
+  },
+  "B|dienone|acoh|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 4.732,
+   "seed_barriers": [
+    4.61,
+    4.73,
+    4.74
+   ]
+  },
+  "B|dienone|acoh|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 4.674,
+   "seed_barriers": [
+    4.65,
+    4.67,
+    4.72
+   ]
+  },
+  "B|dienone|acoh|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 4.443,
+   "seed_barriers": [
+    1.73,
+    4.44,
+    4.47
+   ]
+  },
+  "B|dienone|acoh|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 4.347,
+   "seed_barriers": [
+    4.33,
+    4.36
+   ]
+  },
+  "B|dienone|hfip|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 0.693,
+   "seed_barriers": [
+    0.51,
+    0.69,
+    3.36
+   ]
+  },
+  "B|dienone|hfip|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|hfip|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 3
+   },
+   "barrier": null,
+   "seed_barriers": [
+    1.26
+   ]
+  },
+  "B|dienone|hfip|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|m1|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 1.933,
+   "seed_barriers": [
+    0.86,
+    3.0
+   ]
+  },
+  "B|dienone|m1|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|m1|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 0.165,
+   "seed_barriers": [
+    0.16,
+    0.17,
+    23.21
+   ]
+  },
+  "B|dienone|m1|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 2,
+    "product_not_minimum": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    1.36
+   ]
+  },
+  "B|dienone|none|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 47.634,
+   "seed_barriers": [
+    47.63,
+    47.63,
+    47.63
+   ]
+  },
+  "B|dienone|none|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 46.726,
+   "seed_barriers": [
+    46.72,
+    46.73,
+    46.73
+   ]
+  },
+  "B|dienone|phoh|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 0.844,
+   "seed_barriers": [
+    0.84,
+    0.84,
+    1.36
+   ]
+  },
+  "B|dienone|phoh|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|phoh|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 0.806,
+   "seed_barriers": [
+    0.68,
+    0.81,
+    1.84
+   ]
+  },
+  "B|dienone|phoh|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|pyr|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 0.056,
+   "seed_barriers": [
+    0.01,
+    0.06,
+    0.07
+   ]
+  },
+  "B|dienone|pyr|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 0.174,
+   "seed_barriers": [
+    0.08,
+    0.17,
+    5.35
+   ]
+  },
+  "B|dienone|pyr|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 0.997,
+   "seed_barriers": [
+    0.84,
+    1.0,
+    2.77
+   ]
+  },
+  "B|dienone|pyr|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 2.199,
+   "seed_barriers": [
+    1.95,
+    2.2,
+    3.87
+   ]
+  },
+  "B|dienone|w1|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 2,
+    "ok": 1
+   },
+   "barrier": 0.216,
+   "seed_barriers": [
+    0.17,
+    0.22,
+    0.26
+   ]
+  },
+  "B|dienone|w1|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|w1|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 18.688,
+   "seed_barriers": [
+    18.68,
+    18.69,
+    18.7
+   ]
+  },
+  "B|dienone|w1|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "product_not_minimum": 3
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|w2|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": null,
+   "seed_barriers": [
+    17.93
+   ]
+  },
+  "B|dienone|w2|methanol|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "B|dienone|w2|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "ok": 2
+   },
+   "barrier": 12.811,
+   "seed_barriers": [
+    12.42,
+    13.2
+   ]
+  },
+  "B|dienone|w2|water|stepwise": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 2,
+    "neb_not_converged": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "C|acetate|methanol|direct": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "error": 1,
+    "ok": 1,
+    "reactant_not_minimum": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    16.45
+   ]
+  },
+  "C|acetate|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": 10.516,
+   "seed_barriers": [
+    9.6,
+    11.44
+   ]
+  },
+  "C|acetate|water|direct": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "neb_not_converged": 1,
+    "reactant_not_minimum": 1,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "C|acetate|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 26.303,
+   "seed_barriers": [
+    9.88,
+    26.3,
+    26.92
+   ]
+  },
+  "C|nme3|methanol|direct": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 1,
+    "reactant_not_minimum": 1,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    7.92
+   ]
+  },
+  "C|nme3|methanol|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 1,
+    "ok": 1
+   },
+   "barrier": 12.45,
+   "seed_barriers": [
+    8.16,
+    16.74
+   ]
+  },
+  "C|nme3|water|direct": {
+   "n_jobs": 3,
+   "n_usable": 1,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 1,
+    "reactant_not_minimum": 1,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": [
+    5.38
+   ]
+  },
+  "C|nme3|water|relay": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band",
+    "segmented"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 1,
+    "timeout": 1
+   },
+   "barrier": 16.741,
+   "seed_barriers": [
+    12.49,
+    21.0
+   ]
+  },
+  "Q|methanol|0": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "neb_not_converged": 1,
+    "ok": 2
+   },
+   "barrier": 78.944,
+   "seed_barriers": [
+    78.94,
+    78.94
+   ]
+  },
+  "Q|methanol|1": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 75.157,
+   "seed_barriers": [
+    75.14,
+    75.16,
+    75.18
+   ]
+  },
+  "Q|methanol|2": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "Q|methanol|3": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "neb_not_converged": 2,
+    "timeout": 1
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "Q|water|0": {
+   "n_jobs": 3,
+   "n_usable": 0,
+   "via": [],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 2
+   },
+   "barrier": null,
+   "seed_barriers": []
+  },
+  "Q|water|1": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 73.532,
+   "seed_barriers": [
+    73.5,
+    73.53,
+    73.53
+   ]
+  },
+  "Q|water|2": {
+   "n_jobs": 3,
+   "n_usable": 3,
+   "via": [
+    "band"
+   ],
+   "statuses": {
+    "ok": 3
+   },
+   "barrier": 20.789,
+   "seed_barriers": [
+    20.68,
+    20.79,
+    21.12
+   ]
+  },
+  "Q|water|3": {
+   "n_jobs": 3,
+   "n_usable": 2,
+   "via": [
+    "segmented"
+   ],
+   "statuses": {
+    "error": 1,
+    "neb_not_converged": 2
+   },
+   "barrier": 12.538,
+   "seed_barriers": [
+    12.53,
+    12.55
+   ]
+  }
+ }
+}

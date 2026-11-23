@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 """Generate publication-quality vector PDF figures for the proton-hopping manuscript:
-  - fig1_solution_vs_heldoff.pdf: (a) Stage-1 unconstrained solution barriers vs wire length n;
-                                  (b) Stage-1b Family A distance crossover d(C3...base) = 4..7 A.
-  - fig2_tcmn_pocket_profiles.pdf: (a) 3TVQ TcmN enzyme-pocket 1D relaxed scan profiles (dE vs normalized q/q_max);
-                                   (b) Multi-seed (s7, s11, s13) and His124+ (HIP) barrier comparison across pocket channels.
-  - fig3_nonpeptide_complexes.pdf: (a) Stage-1c unconstrained bulky bases (DBU, TMP, DTBMP) vs Lewis-acid metal complexes
-                                   [MgCl2(acac)] and [ZnCl2(acac)] with DTBMP (direct vs 1-water relay);
-                                   (b) Reactant-to-TS donor-acceptor distance R_DA(C3...N) showing why [MCl2(acac)] + DTBMP
-                                   naturally favours the water relay at R_DA = 4.9-5.0 A without artificial restraints.
+  - fig1_solution_vs_heldoff.pdf
+  - fig2_tcmn_pocket_profiles.pdf
+  - fig3_nonpeptide_complexes.pdf
 Uses colourblind-safe Okabe-Ito palette, >=8 pt fonts, vector PDF output.
 """
 import json
@@ -56,10 +51,10 @@ rel_neb = np.array([6.41, 17.82, 15.83])
 ax1.errorbar(ns, dir_m1, yerr=dir_sd, fmt="-o", color=C_BLUE, lw=1.8, ms=5.5, capsize=3, label="Direct (1D scan, $n$ spectators)")
 ax1.errorbar(ns_rel, rel_m1, yerr=rel_sd, fmt="-s", color=C_ORANGE, lw=1.8, ms=5.5, capsize=3, label="Relay (2D $11\\times 11$ grid)")
 ax1.plot(ns_rel, rel_neb, "--^", color=C_YELLOW, lw=1.3, ms=5, label="Relay (static CI-NEB)")
-ax1.scatter([1], [6.61], marker="*", s=90, color=C_GREEN, zorder=5, label="DFT $\\Delta G^\\ddagger_{\\mathrm{TZ}}$ ($n=1$ relay)")
+ax1.scatter([1], [6.61], marker="*", s=90, color=C_GREEN, zorder=5, label="DFT $\\Delta G_{\\mathrm{act,TZ}}$ ($n=1$ relay)")
 
 ax1.set_xlabel("Explicit water molecules $n$")
-ax1.set_ylabel("Activation barrier $\\Delta E^\\ddagger$ (kcal mol$^{-1}$)")
+ax1.set_ylabel("Activation barrier $\\Delta E_{\\mathrm{act}}$ (kcal mol$^{-1}$)")
 ax1.set_title("(a) Unconstrained base in water ($\\mathrm{NMe}_3$)", loc="left", fontweight="bold")
 ax1.set_xticks([0, 1, 2, 3])
 ax1.set_ylim(0, 22)
@@ -87,7 +82,7 @@ ax2.plot(d_nme3_wat_rel, rel_nme3_wat, "-^", color=C_CYAN, lw=1.8, ms=5.5, label
 
 ax2.axhspan(0, 20, color=C_GREEN, alpha=0.08, label="Pre-registered ceiling (20 kcal mol$^{-1}$)")
 ax2.set_xlabel("Fixed distance $d(\\mathrm{C3}\\cdots\\mathrm{base})$ (\\AA)")
-ax2.set_ylabel("Median barrier $\\Delta E^\\ddagger$ (kcal mol$^{-1}$)")
+ax2.set_ylabel("Median barrier $\\Delta E_{\\mathrm{act}}$ (kcal mol$^{-1}$)")
 ax2.set_title("(b) Held-off base crossover (Family A)", loc="left", fontweight="bold")
 ax2.set_xticks([4.0, 5.0, 6.0, 7.0])
 ax2.set_ylim(0, 120)
@@ -147,7 +142,7 @@ for i, svals in enumerate(seed_data):
 
 ax2.set_xticks(x)
 ax2.set_xticklabels(cats, fontsize=7.8)
-ax2.set_ylabel("Activation barrier $\\Delta E^\\ddagger$ (kcal mol$^{-1}$)")
+ax2.set_ylabel("Activation barrier $\\Delta E_{\\mathrm{act}}$ (kcal mol$^{-1}$)")
 ax2.set_title("(b) Pocket barrier robustness across seeds & $\\mathrm{p}K_{\\mathrm{a}}$", loc="left", fontweight="bold")
 ax2.set_ylim(0, 42)
 ax2.grid(axis="y", ls=":", alpha=0.5)
@@ -174,13 +169,12 @@ ax1.bar(x + w/2, rel_means, width=w, yerr=rel_sds, capsize=3, color=C_BLUE, alph
 
 ax1.set_xticks(x)
 ax1.set_xticklabels(systems, fontsize=7.5)
-ax1.set_ylabel("Activation barrier $\\Delta E^\\ddagger$ (kcal mol$^{-1}$)")
+ax1.set_ylabel("Activation barrier $\\Delta E_{\\mathrm{act}}$ (kcal mol$^{-1}$)")
 ax1.set_title("(a) Unconstrained non-peptide bases & $M\\mathrm{Cl}_2$ complexes", loc="left", fontweight="bold")
 ax1.set_ylim(0, 20)
 ax1.grid(axis="y", ls=":", alpha=0.5)
 ax1.legend(loc="upper right", frameon=False, fontsize=7.5)
 
-# Panel B: 1D scan profiles comparing [MgCl2(acac)]+DTBMP and [ZnCl2(acac)]+DTBMP direct vs relay (seed s2)
 C1C = Path("/mnt/homelab-external/proton-hopping-stage1b/runs/stage1c-nonpeptide")
 p_list = [
     ("E1_dtbmp_n1_direct_s1/result.json", "Free acac + DTBMP (Direct, $12.22$)", C_GREY, "--o"),
@@ -207,4 +201,4 @@ ax2.legend(loc="lower left", frameon=False, fontsize=7.0)
 fig.tight_layout()
 fig.savefig(OUT / "fig3_nonpeptide_complexes.pdf", bbox_inches="tight")
 plt.close(fig)
-print("Generated fig1, fig2, and fig3 PDFs.")
+print("Generated fig1, fig2, and fig3 PDFs with Delta E_act notation.")

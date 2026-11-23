@@ -86,6 +86,39 @@ record("3TVQ C10 water relay (27.96) in main.tex", v_c10_rel == "27.96" and v_c1
 v_dft = f"{dft['dG_dagger_tz_kcal']:.2f}"
 record("DFT dG_dagger_tz (6.61) in main.tex", v_dft == "6.61" and v_dft in tex_str, f"json={v_dft}")
 
+
+# 1b. Recompute seed-paired differences from raw per-seed result files and compare with the manuscript text
+import statistics as _st
+R1C = Path("/mnt/homelab-external/proton-hopping-stage1b/runs/stage1c-nonpeptide")
+def _seeds(cond):
+    out = {}
+    for sd in (0, 1, 2):
+        pth = R1C / f"{cond}_s{sd}" / "result.json"
+        if pth.exists():
+            r = json.load(open(pth))
+            if r.get("status") == "ok":
+                out[sd] = r["barrier_kcal"]
+    return out
+for a, b in [("E1_dbu_n1_direct", "E1_dbu_n1_relay"), ("E1_tmp_n1_direct", "E1_tmp_n1_relay"),
+             ("E1_dtbmp_n1_direct", "E1_dtbmp_n1_relay"), ("E2_tbd_acac_stepwise", "E2_tbd_acac_relay"),
+             ("E3_MgCl2_dtbmp_n1_direct", "E3_MgCl2_dtbmp_n1_relay"), ("E3_ZnCl2_dtbmp_n1_direct", "E3_ZnCl2_dtbmp_n1_relay")]:
+    A, B = _seeds(a), _seeds(b)
+    d = [B[k] - A[k] for k in sorted(set(A) & set(B))]
+    txt = f"{_st.mean(d):+.2f} \\pm {_st.stdev(d):.2f}".replace("+", "+").replace("-", "-")
+    alt = txt.replace("+", "") if txt.startswith("+") else txt
+    ok = (txt in tex_str) or (alt in tex_str)
+    record(f"Recomputed paired difference {b} - {a} ({txt}) present in main.tex", ok, f"n_pairs={len(d)}")
+for ch, expect in [("relay_O27_W259_W266_His128", None), ("relay_O27_W266_His128", None)]:
+    dref = [pock["direct_C10_Asp57"][k]["barrier"] for k in ("s7", "s11", "s13")]
+    r = [pock[ch][k]["barrier"] for k in ("s7", "s11", "s13")]
+    d = [x - y for x, y in zip(r, dref)]
+    txt = f"{_st.mean(d):.2f} \\pm {_st.stdev(d):.2f}"
+    record(f"Recomputed pocket paired difference {ch} ({txt}) present in main.tex", txt in tex_str, "3 seeds")
+
+# 1c. Figures referenced exist on disk
+for fig in re.findall(r"\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}", tex_str):
+    record(f"Figure file {fig} exists", (ROOT / "paper" / fig).exists(), "")
+
 # 2. Citation audit
 cited = set()
 for m in re.finditer(r"\\cite\{([^}]+)\}", tex_str):

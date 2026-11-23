@@ -1,6 +1,6 @@
 {
-  "n_checks": 37,
-  "n_passed": 37,
+  "n_checks": 51,
+  "n_passed": 51,
   "checks": [
     {
       "check": "Author ORCID (0000-0001-5518-0932) in main.tex",
@@ -153,6 +153,76 @@
       "detail": "json=6.61"
     },
     {
+      "check": "Recomputed paired difference E1_dbu_n1_relay - E1_dbu_n1_direct (+6.27 \\pm 1.69) present in main.tex",
+      "passed": true,
+      "detail": "n_pairs=3"
+    },
+    {
+      "check": "Recomputed paired difference E1_tmp_n1_relay - E1_tmp_n1_direct (+5.46 \\pm 1.77) present in main.tex",
+      "passed": true,
+      "detail": "n_pairs=3"
+    },
+    {
+      "check": "Recomputed paired difference E1_dtbmp_n1_relay - E1_dtbmp_n1_direct (+3.14 \\pm 2.34) present in main.tex",
+      "passed": true,
+      "detail": "n_pairs=3"
+    },
+    {
+      "check": "Recomputed paired difference E2_tbd_acac_relay - E2_tbd_acac_stepwise (-0.55 \\pm 0.33) present in main.tex",
+      "passed": true,
+      "detail": "n_pairs=3"
+    },
+    {
+      "check": "Recomputed paired difference E3_MgCl2_dtbmp_n1_relay - E3_MgCl2_dtbmp_n1_direct (-5.06 \\pm 7.94) present in main.tex",
+      "passed": true,
+      "detail": "n_pairs=3"
+    },
+    {
+      "check": "Recomputed paired difference E3_ZnCl2_dtbmp_n1_relay - E3_ZnCl2_dtbmp_n1_direct (-2.64 \\pm 2.97) present in main.tex",
+      "passed": true,
+      "detail": "n_pairs=3"
+    },
+    {
+      "check": "Recomputed pocket paired difference relay_O27_W259_W266_His128 (-23.21 \\pm 1.88) present in main.tex",
+      "passed": true,
+      "detail": "3 seeds"
+    },
+    {
+      "check": "Recomputed pocket paired difference relay_O27_W266_His128 (-25.57 \\pm 5.05) present in main.tex",
+      "passed": true,
+      "detail": "3 seeds"
+    },
+    {
+      "check": "Figure file fig4_mechanism_schematic.pdf exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Figure file fig1_solution_vs_heldoff.pdf exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Figure file fig3_nonpeptide_complexes.pdf exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Figure file fig5_paired_forest.pdf exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Figure file fig2_tcmn_pocket_profiles.pdf exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Figure file fig6_tcmn_active_site.pdf exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "All \\cite keys defined in \\bibitem",
       "passed": true,
       "detail": "cited=52, missing=[]"
@@ -185,7 +255,7 @@
     {
       "check": "Abstract within standard chemical journal limit (<= 350 words)",
       "passed": true,
-      "detail": "300 words"
+      "detail": "242 words"
     }
   ]
 }

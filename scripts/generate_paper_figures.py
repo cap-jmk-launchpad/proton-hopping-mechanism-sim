@@ -81,7 +81,7 @@ ax2.plot(d_nme3_rel, rel_nme3_meoh, "-s", color=C_GREEN, lw=1.8, ms=5.5, label="
 ax2.plot(d_nme3_wat_rel, rel_nme3_wat, "-^", color=C_CYAN, lw=1.8, ms=5.5, label="Relay ($n=1$–$2$): $\\mathrm{NMe}_3$ ($\\mathrm{H}_2\\mathrm{O}$)")
 
 ax2.axhspan(0, 20, color=C_GREEN, alpha=0.08, label="Pre-registered ceiling (20 kcal mol$^{-1}$)")
-ax2.set_xlabel("Fixed distance $d(\\mathrm{C3}\\cdots\\mathrm{base})$ (\\AA)")
+ax2.set_xlabel("Fixed distance $d(\\mathrm{C3}\\cdots\\mathrm{base})$ (Å)")
 ax2.set_ylabel("Median barrier $\\Delta E_{\\mathrm{act}}$ (kcal mol$^{-1}$)")
 ax2.set_title("(b) Held-off base distance crossover", loc="left", fontweight="bold")
 ax2.set_xticks([4.0, 5.0, 6.0, 7.0])
@@ -89,13 +89,13 @@ ax2.set_ylim(0, 120)
 ax2.grid(axis="y", ls=":", alpha=0.5)
 ax2.legend(loc="upper left", frameon=False, fontsize=7.3)
 
-fig.tight_layout()
+fig.tight_layout(w_pad=2.0)
 fig.savefig(OUT / "fig1_solution_vs_heldoff.pdf", bbox_inches="tight")
 plt.close(fig)
 
 # ---------------- FIGURE 2: 3TVQ TcmN Enzyme-Pocket Profiles & Multi-Seed Summary ----------------
 B = Path("/mnt/homelab-external/proton-hopping-pocket")
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 3.0), dpi=300)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.4, 3.3), dpi=300)
 
 profiles = [
     ("xtb/scans/direct_C10_Asp57/scan.json", "Direct: C10–H24 $\\to$ Asp57", C_ORANGE, "-o"),
@@ -114,7 +114,7 @@ for rel_path, lab, col, fmt in profiles:
 
 ax1.set_xlabel("Normalized proton-transfer coordinate $\\xi$")
 ax1.set_ylabel("$\\Delta E - \\Delta E_{\\mathrm{R,min}}$ (kcal mol$^{-1}$)")
-ax1.set_title("(a) TcmN pocket 1D relaxed scans (PDB 3TVQ, $s_7$)", loc="left", fontweight="bold")
+ax1.set_title("(a) TcmN pocket 1D relaxed scans (PDB 3TVQ)", loc="left", fontweight="bold")
 ax1.set_ylim(-2, 40)
 ax1.grid(axis="y", ls=":", alpha=0.5)
 ax1.legend(loc="upper left", frameon=False, fontsize=7.3)
@@ -148,12 +148,12 @@ ax2.set_ylim(0, 42)
 ax2.grid(axis="y", ls=":", alpha=0.5)
 ax2.legend(loc="upper right", frameon=False, fontsize=7.5)
 
-fig.tight_layout()
+fig.tight_layout(w_pad=2.2)
 fig.savefig(OUT / "fig2_tcmn_pocket_profiles.pdf", bbox_inches="tight")
 plt.close(fig)
 
 # ---------------- FIGURE 3: Stage-1c Non-Peptide Bulky Bases & Metal-Chelated Complexes ----------------
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 3.0), dpi=300)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.4, 3.3), dpi=300)
 
 systems = ["DBU\n(amidine)", "TMP\n(piperidine)", "DTBMP\n(2,6-$t\\mathrm{Bu}_2$Py)", "$[\\mathrm{MgCl}_2(\\mathrm{acac})]$\n+ DTBMP", "$[\\mathrm{ZnCl}_2(\\mathrm{acac})]$\n+ DTBMP"]
 x = np.arange(len(systems))
@@ -198,7 +198,7 @@ ax2.axhline(0, color="black", lw=0.6, ls=":")
 ax2.grid(axis="y", ls=":", alpha=0.5)
 ax2.legend(loc="lower left", frameon=False, fontsize=7.0)
 
-fig.tight_layout()
+fig.tight_layout(w_pad=2.2)
 fig.savefig(OUT / "fig3_nonpeptide_complexes.pdf", bbox_inches="tight")
 plt.close(fig)
 print("Generated fig1, fig2, and fig3 PDFs with Delta E_act notation.")

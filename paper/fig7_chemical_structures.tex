@@ -1,0 +1,71 @@
+\documentclass[border=6pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{chemfig}
+\usepackage{xcolor}
+
+\setchemfig{
+  atom sep=1.50em,
+  bond offset=1.8pt,
+  double bond sep=2.2pt,
+  cram width=3.2pt,
+  bond style={line width=0.65pt},
+  atom style={font=\sffamily\footnotesize}
+}
+
+\newcommand{\molcell}[3]{%
+  \begin{minipage}[t]{4.3cm}
+    \centering
+    {\sffamily\bfseries\footnotesize #1}\\[1pt]
+    {\sffamily\scriptsize\color{black!70} #2}\\[6pt]
+    \begin{minipage}[c][2.5cm][c]{4.2cm}
+      \centering
+      \scalebox{0.80}{#3}
+    \end{minipage}
+  \end{minipage}%
+}
+
+\begin{document}
+\sffamily
+\begin{tabular}{@{}cccc@{}}
+% Row 1
+\molcell{Acetylacetone}{$\text{C}_5\text{H}_8\text{O}_2$ \textperiodcentered{} carbon acid}{%
+  \chemfig{-[:30](=[:90]O)-[:-30]-[:30](=[:90]O)-[:-30]}%
+} &
+\molcell{Cyclohexa-2,4-dien-1-one}{$\text{C}_6\text{H}_6\text{O}$ \textperiodcentered{} tautomerisation}{%
+  \chemfig{*6(-=-=(=O)--)}%
+} &
+\molcell{\textit{all-cis}-Cyclohexane-1,3,5-triol}{$\text{C}_6\text{H}_{12}\text{O}_3$ \textperiodcentered{} preorganised wire}{%
+  \chemfig{*6(-(<[:-90]OH)--(<[:30]OH)--(<[:150]HO)-)}%
+} &
+\molcell{\textit{trans}-Dihydroquercetin (DQH)}{$\text{C}_{15}\text{H}_{12}\text{O}_7$ \textperiodcentered{} TcmN ligand}{%
+  \scalebox{0.82}{\chemfig{HO-*6(=-(-HO)=*6(-(=[:-30]O)-(<:[:-15]OH)-(<[:45]*6(=-(-OH)=(-OH)-=-))-O-)-=-)}}%
+} \\[10pt]
+% Row 2
+\molcell{2-Pyridone}{$\text{C}_5\text{H}_5\text{NO}$ \textperiodcentered{} bifunctional}{%
+  \chemfig{*6(=-NH-(=O)-=-)}%
+} &
+\molcell{7-Hydroxyquinoline}{$\text{C}_9\text{H}_7\text{NO}$ \textperiodcentered{} positive control}{%
+  \chemfig{HO-*6(=-=*6(-=-=N-)-=-)}%
+} &
+\molcell{TBD}{$\text{C}_7\text{H}_{13}\text{N}_3$ \textperiodcentered{} bicyclic guanidine}{%
+  \chemfig{*6(--N*6(----\chemabove{N}{H}-)-=N--)}%
+} &
+\molcell{DBU}{$\text{C}_9\text{H}_{16}\text{N}_2$ \textperiodcentered{} bicyclic amidine}{%
+  \chemfig{*6(--N*7(------)-=N--)}%
+} \\[10pt]
+% Row 3
+\molcell{TMP}{$\text{C}_9\text{H}_{19}\text{N}$ \textperiodcentered{} hindered amine}{%
+  \chemfig{*6(---(-[:15])(-[:60])-\chemabove{N}{H}-(-[:120])(-[:165])-)}%
+} &
+\molcell{DTBMP}{$\text{C}_{14}\text{H}_{23}\text{N}$ \textperiodcentered{} bulky pyridine}{%
+  \chemfig{*6(-(-[:-90])=-(-[:30](-[:90])(-[:-90])(-[:0]))=N-(-[:150](-[:90])(-[:-90])(-[:180]))=)}%
+} &
+\molcell{$[\text{MgCl}_2(\text{acac})]$}{Lewis-acid diketone chelate}{%
+  \chemfig{Mg?[a](-[:135]Cl)(-[:-135]Cl)-[:60]O-[:0](-[:60])=[:-60]-[:-120](-[:-60])=[:180]O-?[a]}%
+} &
+\molcell{$[\text{ZnCl}_2(\text{acac})]$}{Lewis-acid diketone chelate}{%
+  \chemfig{Zn?[a](-[:135]Cl)(-[:-135]Cl)-[:60]O-[:0](-[:60])=[:-60]-[:-120](-[:-60])=[:180]O-?[a]}%
+}
+\end{tabular}
+\end{document}
